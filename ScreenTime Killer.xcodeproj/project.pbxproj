@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C51C8CF2C785A5400A3B796 /* CircularLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8CE2C785A5400A3B796 /* CircularLogo.swift */; };
+		1C51C8D62C78696600A3B796 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D52C78696600A3B796 /* SessionManager.swift */; };
+		1C51C8D82C786B1900A3B796 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D72C786B1900A3B796 /* WelcomeScreen.swift */; };
+		1C51C8DA2C786D6D00A3B796 /* StepsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D92C786D6D00A3B796 /* StepsScreen.swift */; };
 		1C6FA8282C759FA200C9CF97 /* ScreenTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */; };
 		1C8FBCEA2C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */; };
 		1C8FBCEC2C74AA3F00F6E5AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */; };
@@ -15,10 +19,6 @@
 		1C8FBCFB2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCFA2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift */; };
 		1C8FBD052C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */; };
 		1C8FBD072C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */; };
-		1C8FBD1A2C75985A00F6E5AC /* ScreenTimeMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD192C75985A00F6E5AC /* ScreenTimeMonitor.swift */; };
-		1C8FBD1C2C75985A00F6E5AC /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD1B2C75985A00F6E5AC /* TotalActivityReport.swift */; };
-		1C8FBD1E2C75985A00F6E5AC /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD1D2C75985A00F6E5AC /* TotalActivityView.swift */; };
-		1C8FBD232C75985A00F6E5AC /* ScreenTimeMonitor.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 1C8FBD172C75985A00F6E5AC /* ScreenTimeMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +36,6 @@
 			remoteGlobalIDString = 1C8FBCE52C74AA3F00F6E5AC;
 			remoteInfo = "ScreenTime Killer";
 		};
-		1C8FBD212C75985A00F6E5AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1C8FBCDE2C74AA3F00F6E5AC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C8FBD162C75985A00F6E5AC;
-			remoteInfo = ScreenTimeMonitor;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,7 +45,6 @@
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				1C8FBD232C75985A00F6E5AC /* ScreenTimeMonitor.appex in Embed ExtensionKit Extensions */,
 			);
 			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		1C39911A2C75AF2300CECE2D /* ScreenTime Killer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ScreenTime Killer.entitlements"; sourceTree = "<group>"; };
+		1C51C8CE2C785A5400A3B796 /* CircularLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLogo.swift; sourceTree = "<group>"; };
+		1C51C8D52C78696600A3B796 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		1C51C8D72C786B1900A3B796 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		1C51C8D92C786D6D00A3B796 /* StepsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsScreen.swift; sourceTree = "<group>"; };
 		1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeView.swift; sourceTree = "<group>"; };
 		1C8FBCE62C74AA3F00F6E5AC /* ScreenTime Killer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScreenTime Killer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerApp.swift; sourceTree = "<group>"; };
@@ -72,12 +68,6 @@
 		1C8FBD002C74AA4100F6E5AC /* ScreenTime KillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScreenTime KillerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITests.swift; sourceTree = "<group>"; };
 		1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1C8FBD172C75985A00F6E5AC /* ScreenTimeMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = ScreenTimeMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C8FBD192C75985A00F6E5AC /* ScreenTimeMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeMonitor.swift; sourceTree = "<group>"; };
-		1C8FBD1B2C75985A00F6E5AC /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
-		1C8FBD1D2C75985A00F6E5AC /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
-		1C8FBD1F2C75985A00F6E5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C8FBD202C75985A00F6E5AC /* ScreenTimeMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeMonitor.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,23 +92,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C8FBD142C75985A00F6E5AC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C51C8D12C78641700A3B796 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */,
+				1C51C8D72C786B1900A3B796 /* WelcomeScreen.swift */,
+				1C51C8D92C786D6D00A3B796 /* StepsScreen.swift */,
+				1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1C8FBCDD2C74AA3F00F6E5AC = {
 			isa = PBXGroup;
 			children = (
 				1C8FBCE82C74AA3F00F6E5AC /* ScreenTime Killer */,
 				1C8FBCF92C74AA4100F6E5AC /* ScreenTime KillerTests */,
 				1C8FBD032C74AA4100F6E5AC /* ScreenTime KillerUITests */,
-				1C8FBD182C75985A00F6E5AC /* ScreenTimeMonitor */,
 				1C8FBCE72C74AA3F00F6E5AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,7 +122,6 @@
 				1C8FBCE62C74AA3F00F6E5AC /* ScreenTime Killer.app */,
 				1C8FBCF62C74AA4100F6E5AC /* ScreenTime KillerTests.xctest */,
 				1C8FBD002C74AA4100F6E5AC /* ScreenTime KillerUITests.xctest */,
-				1C8FBD172C75985A00F6E5AC /* ScreenTimeMonitor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,10 +129,11 @@
 		1C8FBCE82C74AA3F00F6E5AC /* ScreenTime Killer */ = {
 			isa = PBXGroup;
 			children = (
+				1C51C8D12C78641700A3B796 /* Views */,
 				1C39911A2C75AF2300CECE2D /* ScreenTime Killer.entitlements */,
 				1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */,
-				1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */,
-				1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */,
+				1C51C8CE2C785A5400A3B796 /* CircularLogo.swift */,
+				1C51C8D52C78696600A3B796 /* SessionManager.swift */,
 				1C8FBCED2C74AA4100F6E5AC /* Assets.xcassets */,
 				1C8FBCEF2C74AA4100F6E5AC /* Preview Content */,
 			);
@@ -172,18 +165,6 @@
 			path = "ScreenTime KillerUITests";
 			sourceTree = "<group>";
 		};
-		1C8FBD182C75985A00F6E5AC /* ScreenTimeMonitor */ = {
-			isa = PBXGroup;
-			children = (
-				1C8FBD192C75985A00F6E5AC /* ScreenTimeMonitor.swift */,
-				1C8FBD1B2C75985A00F6E5AC /* TotalActivityReport.swift */,
-				1C8FBD1D2C75985A00F6E5AC /* TotalActivityView.swift */,
-				1C8FBD1F2C75985A00F6E5AC /* Info.plist */,
-				1C8FBD202C75985A00F6E5AC /* ScreenTimeMonitor.entitlements */,
-			);
-			path = ScreenTimeMonitor;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,7 +180,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1C8FBD222C75985A00F6E5AC /* PBXTargetDependency */,
 			);
 			name = "ScreenTime Killer";
 			productName = "ScreenTime Killer";
@@ -242,23 +222,6 @@
 			productReference = 1C8FBD002C74AA4100F6E5AC /* ScreenTime KillerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1C8FBD162C75985A00F6E5AC /* ScreenTimeMonitor */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C8FBD242C75985A00F6E5AC /* Build configuration list for PBXNativeTarget "ScreenTimeMonitor" */;
-			buildPhases = (
-				1C8FBD132C75985A00F6E5AC /* Sources */,
-				1C8FBD142C75985A00F6E5AC /* Frameworks */,
-				1C8FBD152C75985A00F6E5AC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ScreenTimeMonitor;
-			productName = ScreenTimeMonitor;
-			productReference = 1C8FBD172C75985A00F6E5AC /* ScreenTimeMonitor.appex */;
-			productType = "com.apple.product-type.extensionkit-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,9 +246,6 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 1C8FBCE52C74AA3F00F6E5AC;
 					};
-					1C8FBD162C75985A00F6E5AC = {
-						CreatedOnToolsVersion = 15.4;
-					};
 				};
 			};
 			buildConfigurationList = 1C8FBCE12C74AA3F00F6E5AC /* Build configuration list for PBXProject "ScreenTime Killer" */;
@@ -304,7 +264,6 @@
 				1C8FBCE52C74AA3F00F6E5AC /* ScreenTime Killer */,
 				1C8FBCF52C74AA4100F6E5AC /* ScreenTime KillerTests */,
 				1C8FBCFF2C74AA4100F6E5AC /* ScreenTime KillerUITests */,
-				1C8FBD162C75985A00F6E5AC /* ScreenTimeMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -333,13 +292,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C8FBD152C75985A00F6E5AC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -349,7 +301,11 @@
 			files = (
 				1C8FBCEC2C74AA3F00F6E5AC /* ContentView.swift in Sources */,
 				1C8FBCEA2C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift in Sources */,
+				1C51C8D62C78696600A3B796 /* SessionManager.swift in Sources */,
+				1C51C8DA2C786D6D00A3B796 /* StepsScreen.swift in Sources */,
+				1C51C8D82C786B1900A3B796 /* WelcomeScreen.swift in Sources */,
 				1C6FA8282C759FA200C9CF97 /* ScreenTimeView.swift in Sources */,
+				1C51C8CF2C785A5400A3B796 /* CircularLogo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,16 +326,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C8FBD132C75985A00F6E5AC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C8FBD1E2C75985A00F6E5AC /* TotalActivityView.swift in Sources */,
-				1C8FBD1A2C75985A00F6E5AC /* ScreenTimeMonitor.swift in Sources */,
-				1C8FBD1C2C75985A00F6E5AC /* TotalActivityReport.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -392,11 +338,6 @@
 			isa = PBXTargetDependency;
 			target = 1C8FBCE52C74AA3F00F6E5AC /* ScreenTime Killer */;
 			targetProxy = 1C8FBD012C74AA4100F6E5AC /* PBXContainerItemProxy */;
-		};
-		1C8FBD222C75985A00F6E5AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C8FBD162C75985A00F6E5AC /* ScreenTimeMonitor */;
-			targetProxy = 1C8FBD212C75985A00F6E5AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -523,14 +464,13 @@
 		1C8FBD0B2C74AA4100F6E5AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ScreenTime Killer/ScreenTime Killer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTime Killer/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P3C6CS29H2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -556,14 +496,13 @@
 		1C8FBD0C2C74AA4100F6E5AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ScreenTime Killer/ScreenTime Killer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTime Killer/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P3C6CS29H2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -658,58 +597,6 @@
 			};
 			name = Release;
 		};
-		1C8FBD252C75985A00F6E5AC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = ScreenTimeMonitor/ScreenTimeMonitor.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P3C6CS29H2;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenTimeMonitor/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScreenTimeMonitor;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer.ScreenTimeMonitor";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1C8FBD262C75985A00F6E5AC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = ScreenTimeMonitor/ScreenTimeMonitor.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P3C6CS29H2;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenTimeMonitor/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScreenTimeMonitor;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer.ScreenTimeMonitor";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -745,15 +632,6 @@
 			buildConfigurations = (
 				1C8FBD112C74AA4100F6E5AC /* Debug */,
 				1C8FBD122C74AA4100F6E5AC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C8FBD242C75985A00F6E5AC /* Build configuration list for PBXNativeTarget "ScreenTimeMonitor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C8FBD252C75985A00F6E5AC /* Debug */,
-				1C8FBD262C75985A00F6E5AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
