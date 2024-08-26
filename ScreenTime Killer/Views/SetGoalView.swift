@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct SetPriceView: View {
+struct SetGoalView: View {
     @EnvironmentObject var session: SessionManager
-    @State var notifyMeAbout:
+    
+    @State var hours: Int = 0
+    @State var minutes: Int = 0
+    
     var body: some View {
         VStack {
             Text("Set your goal ⛳")
@@ -20,19 +23,14 @@ struct SetPriceView: View {
                 .multilineTextAlignment(.center)
                 .fontWeight(.light)
         }.padding().offset(y: 100)
-
-        Form {
-            Section(header: Text("Notifications")) {
-                Picker("Notify Me About", selection: $notifyMeAbout) {
-                    Text("Direct Messages").tag(NotifyMeAboutType.directMessages)
-                    Text("Mentions").tag(NotifyMeAboutType.mentions)
-                    Text("Anything").tag(NotifyMeAboutType.anything)
-                }
-                Toggle("Play notification sounds", isOn: $playNotificationSounds)
-            }
+        NavigationStack {
+            VStack {
+                TimePicker(hour: $hours, minutes: $minutes)
+                    .padding(15)
+                    .background(.white, in: .rect(cornerRadius: 10))
+                    .padding(.horizontal, 20)
             }
         }
-        
         Spacer()
 
         Button("Set your price") {
@@ -44,6 +42,6 @@ struct SetPriceView: View {
 }
 
 #Preview {
-    SetPriceView()
+    SetGoalView()
         .environmentObject(SessionManager())
 }
