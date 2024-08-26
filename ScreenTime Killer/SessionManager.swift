@@ -15,7 +15,9 @@ final class SessionManager: ObservableObject {
         case Step3
     }
     
+    
     @Published private(set) var currentStep: CurrentStep?
+//    @Published private(set) var goal: Int32?
     
     func initStep() {
         currentStep = .Step1

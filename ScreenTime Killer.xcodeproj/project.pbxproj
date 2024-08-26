@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C374DF82C7B269D0098C9A8 /* SetPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C374DF72C7B269D0098C9A8 /* SetPriceView.swift */; };
 		1C51C8CF2C785A5400A3B796 /* CircularLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8CE2C785A5400A3B796 /* CircularLogo.swift */; };
 		1C51C8D62C78696600A3B796 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D52C78696600A3B796 /* SessionManager.swift */; };
-		1C51C8D82C786B1900A3B796 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D72C786B1900A3B796 /* WelcomeScreen.swift */; };
-		1C51C8DA2C786D6D00A3B796 /* StepsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D92C786D6D00A3B796 /* StepsScreen.swift */; };
+		1C51C8D82C786B1900A3B796 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D72C786B1900A3B796 /* WelcomeView.swift */; };
+		1C51C8DA2C786D6D00A3B796 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D92C786D6D00A3B796 /* StepsView.swift */; };
+		1C51C8DC2C7B051600A3B796 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8DB2C7B051600A3B796 /* MainAppView.swift */; };
 		1C6FA8282C759FA200C9CF97 /* ScreenTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */; };
 		1C8FBCEA2C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */; };
 		1C8FBCEC2C74AA3F00F6E5AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */; };
@@ -19,6 +21,7 @@
 		1C8FBCFB2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCFA2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift */; };
 		1C8FBD052C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */; };
 		1C8FBD072C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */; };
+		1CA5514B2C7B1EB8002CAF37 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1CA5514A2C7B1EB8002CAF37 /* PhosphorSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +55,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C374DF72C7B269D0098C9A8 /* SetPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceView.swift; sourceTree = "<group>"; };
 		1C39911A2C75AF2300CECE2D /* ScreenTime Killer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ScreenTime Killer.entitlements"; sourceTree = "<group>"; };
 		1C51C8CE2C785A5400A3B796 /* CircularLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLogo.swift; sourceTree = "<group>"; };
 		1C51C8D52C78696600A3B796 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		1C51C8D72C786B1900A3B796 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
-		1C51C8D92C786D6D00A3B796 /* StepsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsScreen.swift; sourceTree = "<group>"; };
+		1C51C8D72C786B1900A3B796 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		1C51C8D92C786D6D00A3B796 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
+		1C51C8DB2C7B051600A3B796 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
 		1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeView.swift; sourceTree = "<group>"; };
 		1C8FBCE62C74AA3F00F6E5AC /* ScreenTime Killer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScreenTime Killer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerApp.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA5514B2C7B1EB8002CAF37 /* PhosphorSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +104,11 @@
 		1C51C8D12C78641700A3B796 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1C51C8DB2C7B051600A3B796 /* MainAppView.swift */,
 				1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */,
-				1C51C8D72C786B1900A3B796 /* WelcomeScreen.swift */,
-				1C51C8D92C786D6D00A3B796 /* StepsScreen.swift */,
+				1C51C8D72C786B1900A3B796 /* WelcomeView.swift */,
+				1C374DF72C7B269D0098C9A8 /* SetPriceView.swift */,
+				1C51C8D92C786D6D00A3B796 /* StepsView.swift */,
 				1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */,
 			);
 			path = Views;
@@ -182,6 +190,9 @@
 			dependencies = (
 			);
 			name = "ScreenTime Killer";
+			packageProductDependencies = (
+				1CA5514A2C7B1EB8002CAF37 /* PhosphorSwift */,
+			);
 			productName = "ScreenTime Killer";
 			productReference = 1C8FBCE62C74AA3F00F6E5AC /* ScreenTime Killer.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 1C8FBCDD2C74AA3F00F6E5AC;
+			packageReferences = (
+				1CA551492C7B1EB8002CAF37 /* XCRemoteSwiftPackageReference "swift" */,
+			);
 			productRefGroup = 1C8FBCE72C74AA3F00F6E5AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,11 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C374DF82C7B269D0098C9A8 /* SetPriceView.swift in Sources */,
 				1C8FBCEC2C74AA3F00F6E5AC /* ContentView.swift in Sources */,
 				1C8FBCEA2C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift in Sources */,
 				1C51C8D62C78696600A3B796 /* SessionManager.swift in Sources */,
-				1C51C8DA2C786D6D00A3B796 /* StepsScreen.swift in Sources */,
-				1C51C8D82C786B1900A3B796 /* WelcomeScreen.swift in Sources */,
+				1C51C8DA2C786D6D00A3B796 /* StepsView.swift in Sources */,
+				1C51C8D82C786B1900A3B796 /* WelcomeView.swift in Sources */,
+				1C51C8DC2C7B051600A3B796 /* MainAppView.swift in Sources */,
 				1C6FA8282C759FA200C9CF97 /* ScreenTimeView.swift in Sources */,
 				1C51C8CF2C785A5400A3B796 /* CircularLogo.swift in Sources */,
 			);
@@ -345,7 +361,7 @@
 		1C8FBD082C74AA4100F6E5AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -408,7 +424,7 @@
 		1C8FBD092C74AA4100F6E5AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -637,6 +653,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CA551492C7B1EB8002CAF37 /* XCRemoteSwiftPackageReference "swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/phosphor-icons/swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CA5514A2C7B1EB8002CAF37 /* PhosphorSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CA551492C7B1EB8002CAF37 /* XCRemoteSwiftPackageReference "swift" */;
+			productName = PhosphorSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C8FBCDE2C74AA3F00F6E5AC /* Project object */;
 }
