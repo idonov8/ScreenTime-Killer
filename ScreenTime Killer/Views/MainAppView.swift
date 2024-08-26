@@ -25,16 +25,15 @@ struct MainAppView: View {
             case .Step1:
                 WelcomeView()
                     .environmentObject(session)
-                    .transition(.move(edge: .leading))
+                    .transition(.push(from: .trailing))
             case .Step2:
                 StepsView()
                     .environmentObject(session)
-                    .transition(.move(edge: .leading ))
+                    .transition(.push(from: .trailing))
             case .Step3:
-                ContentView()
-//                SetPriceView()
-//                    .environmentObject(session)
-//                    .transition(.move(edge: .leading))
+                SetGoalView()
+                    .environmentObject(session)
+                    .transition(.push(from: .trailing))
             default:
                 // TODO: implement last screen
                 ContentView()

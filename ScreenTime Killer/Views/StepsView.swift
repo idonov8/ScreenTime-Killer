@@ -21,18 +21,23 @@ struct StepsView: View {
                 .frame(height: 50)
         VStack(alignment: .leading) {
             Text("1. Set screen time goal")
-                .font(.title2)
-                .fontWeight(.bold)
+
+                
             Spacer()
                     .frame(height: 50)
-            Text("2. Set price to pay if you don't reach the goal").font(.title2)
-                .fontWeight(.bold)
+            Text("2. Set price to pay if you don't reach the goal")
+                
             Spacer()
                     .frame(height: 50)
-            Text("3. Stick to your goal! or pay the price...").font(.title2)
-                .fontWeight(.bold)
+            Text("3. Stick to your goal! or pay the price.")
+                
         }
-        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        .padding(.horizontal, 18)
+        .fontDesign(.rounded)
+        .fontWeight(.light)
+        .font(.system(size: 24))
+        .fixedSize(horizontal: false, vertical: true)
+
         Spacer()
         Button("Set goal", systemImage: "arrow-right-light") {
             withAnimation{
