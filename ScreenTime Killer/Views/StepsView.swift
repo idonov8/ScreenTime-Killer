@@ -44,7 +44,9 @@ struct StepsView: View {
                 session.NextStep()
             }
         }
-        .buttonStyle(BorderedProminentButtonStyle()).controlSize(.large)
+        .buttonStyle(BorderedProminentButtonStyle())
+        .accentColor(.black)
+        .controlSize(.large)
     }
 }
 

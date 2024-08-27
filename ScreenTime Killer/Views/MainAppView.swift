@@ -9,14 +9,28 @@ import SwiftUI
 
 struct MainAppView: View {
     @StateObject private var session = SessionManager()
+    @State private var isBack = false
+
+    let transition: AnyTransition = .asymmetric(
+            insertion: .move(edge: .trailing).combined(with: .opacity),
+            removal: .move(edge: .leading).combined(with: .opacity)
+        )
+
+    let backTransition: AnyTransition = .slide
+    
 
     var body: some View {
         VStack {
             if session.currentStep != .Step1 {
                 // TODO: use "Navigation Link" so it looks nicer
                 Button("Back") {
-                    withAnimation{
-                        session.initStep()
+                    withAnimation {
+                        isBack = true
+                        session.PrevStep()
+                        Task {
+                            isBack = false
+                        }
+                        
                     }
                 }
                 .offset(x: -130, y: -10)
@@ -25,15 +39,19 @@ struct MainAppView: View {
             case .Step1:
                 WelcomeView()
                     .environmentObject(session)
-                    .transition(.push(from: .trailing))
+                    .transition(isBack ? backTransition : transition)
             case .Step2:
                 StepsView()
                     .environmentObject(session)
-                    .transition(.push(from: .trailing))
+                    .transition(isBack ? backTransition : transition)
             case .Step3:
                 SetGoalView()
                     .environmentObject(session)
-                    .transition(.push(from: .trailing))
+                    .transition(isBack ? backTransition : transition)
+            case .Step4:
+                SetPriceView()
+                    .environmentObject(session)
+                    .transition(isBack ? backTransition : transition)
             default:
                 // TODO: implement last screen
                 ContentView()

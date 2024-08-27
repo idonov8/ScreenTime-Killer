@@ -24,11 +24,13 @@ struct WelcomeView: View {
                 .font(.title3).multilineTextAlignment(.center).padding([.leading, .bottom, .trailing], 20.0).padding([.top], 1.0).fontWeight(.light)
             Spacer()
             Button("Get started, it's free!") {
-                withAnimation{
+                withAnimation {
                     session.NextStep()
                 }
             }
-            .buttonStyle(BorderedProminentButtonStyle()).controlSize(.large)
+            .buttonStyle(BorderedProminentButtonStyle())
+            .accentColor(.black)
+            .controlSize(.large)
         }
     }
 }

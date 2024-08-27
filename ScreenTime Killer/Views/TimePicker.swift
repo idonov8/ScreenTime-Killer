@@ -29,7 +29,7 @@ struct TimePicker: View {
     @ViewBuilder
     private func CustomView(_ title: String, _ range: ClosedRange<Int>, _ selection: Binding<Int>) -> some View {
         PickerViewWithoutIndicator(selection: selection) {
-            ForEach(0...12, id: \.self) { value in
+            ForEach(range, id: \.self) { value in
                 Text("\(value)").tag(value)
             }
         }

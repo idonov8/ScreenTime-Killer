@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhosphorSwift
 
 struct SetGoalView: View {
     @EnvironmentObject var session: SessionManager
@@ -30,7 +31,7 @@ struct SetGoalView: View {
                     .padding(15)
                     .background(.white, in: .rect(cornerRadius: 10))
                     .padding(.horizontal, 20)
-    
+                Spacer().frame(height: 20)
                 HStack(alignment: .firstTextBaseline) {
                     Text("I will stick to this goal for")
                     Picker("", selection: $days) {
@@ -39,6 +40,12 @@ struct SetGoalView: View {
                         }
                     }
                     Text("days")
+                }
+                HStack {
+                    Ph.info.regular
+                        .frame(width: 16, height: 16)
+                    Text(" It takes 66 days to form a new habit")
+                        .font(.caption)
                 }
             
             }.padding()
@@ -51,6 +58,7 @@ struct SetGoalView: View {
             }
         }
         .buttonStyle(BorderedProminentButtonStyle())
+        .accentColor(.black)
         .controlSize(.large)
     }
 }

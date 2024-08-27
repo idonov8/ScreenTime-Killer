@@ -13,6 +13,7 @@ final class SessionManager: ObservableObject {
         case Step1
         case Step2
         case Step3
+        case Step4
     }
     
     
@@ -30,10 +31,26 @@ final class SessionManager: ObservableObject {
         case .Step2:
             currentStep = .Step3
         case .Step3:
+            currentStep = .Step4
+        case .Step4:
             break
         case nil:
             currentStep = .Step1
         }
     }
     
+    func PrevStep() {
+        switch currentStep {
+        case .Step1:
+            break
+        case .Step2:
+            currentStep = .Step1
+        case .Step3:
+            currentStep = .Step2
+        case .Step4:
+            currentStep = .Step3
+        case nil:
+            currentStep = .Step1
+        }
+    }
 }
