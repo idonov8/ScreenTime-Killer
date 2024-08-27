@@ -39,14 +39,9 @@ struct StepsView: View {
         .fixedSize(horizontal: false, vertical: true)
 
         Spacer()
-        Button("Set goal", systemImage: "arrow-right-light") {
-            withAnimation{
-                session.NextStep()
-            }
-        }
-        .buttonStyle(BorderedProminentButtonStyle())
-        .accentColor(.black)
-        .controlSize(.large)
+        
+        NextStepButton(nextStep: session.NextStep, title: "Set goal")
+
     }
 }
 

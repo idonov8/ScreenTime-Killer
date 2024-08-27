@@ -23,6 +23,8 @@
 		1C8FBD072C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */; };
 		1CA5514B2C7B1EB8002CAF37 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1CA5514A2C7B1EB8002CAF37 /* PhosphorSwift */; };
 		1CA6D51E2C7C62A400525341 /* SetPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51D2C7C62A400525341 /* SetPriceView.swift */; };
+		1CA6D5202C7DAA4E00525341 /* GrantPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */; };
+		1CA6D5222C7DAADB00525341 /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D5212C7DAADB00525341 /* NextStepButton.swift */; };
 		1CACCCA72C7C4D3300687EA9 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CACCCA62C7C4D3300687EA9 /* TimePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +78,9 @@
 		1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITests.swift; sourceTree = "<group>"; };
 		1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1CA6D51D2C7C62A400525341 /* SetPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceView.swift; sourceTree = "<group>"; };
-		1CACCCA62C7C4D3300687EA9 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimePicker.swift; path = Views/TimePicker.swift; sourceTree = "<group>"; };
+		1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrantPermissionsView.swift; sourceTree = "<group>"; };
+		1CA6D5212C7DAADB00525341 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextStepButton.swift; path = "ScreenTime Killer/Components/NextStepButton.swift"; sourceTree = SOURCE_ROOT; };
+		1CACCCA62C7C4D3300687EA9 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			children = (
 				1C51C8DB2C7B051600A3B796 /* MainAppView.swift */,
 				1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */,
+				1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */,
 				1C51C8D72C786B1900A3B796 /* WelcomeView.swift */,
 				1C374DF72C7B269D0098C9A8 /* SetGoalView.swift */,
 				1CA6D51D2C7C62A400525341 /* SetPriceView.swift */,
@@ -142,11 +147,10 @@
 		1C8FBCE82C74AA3F00F6E5AC /* ScreenTime Killer */ = {
 			isa = PBXGroup;
 			children = (
+				1CA6D5232C7DAAE900525341 /* Components */,
 				1C51C8D12C78641700A3B796 /* Views */,
 				1C39911A2C75AF2300CECE2D /* ScreenTime Killer.entitlements */,
 				1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */,
-				1CACCCA62C7C4D3300687EA9 /* TimePicker.swift */,
-				1C51C8CE2C785A5400A3B796 /* CircularLogo.swift */,
 				1C51C8D52C78696600A3B796 /* SessionManager.swift */,
 				1C8FBCED2C74AA4100F6E5AC /* Assets.xcassets */,
 				1C8FBCEF2C74AA4100F6E5AC /* Preview Content */,
@@ -177,6 +181,16 @@
 				1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */,
 			);
 			path = "ScreenTime KillerUITests";
+			sourceTree = "<group>";
+		};
+		1CA6D5232C7DAAE900525341 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1CA6D5212C7DAADB00525341 /* NextStepButton.swift */,
+				1CACCCA62C7C4D3300687EA9 /* TimePicker.swift */,
+				1C51C8CE2C785A5400A3B796 /* CircularLogo.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,9 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA6D51E2C7C62A400525341 /* SetPriceView.swift in Sources */,
+				1CA6D5222C7DAADB00525341 /* NextStepButton.swift in Sources */,
 				1C374DF82C7B269D0098C9A8 /* SetGoalView.swift in Sources */,
 				1C8FBCEC2C74AA3F00F6E5AC /* ContentView.swift in Sources */,
 				1C8FBCEA2C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift in Sources */,
+				1CA6D5202C7DAA4E00525341 /* GrantPermissionsView.swift in Sources */,
 				1C51C8D62C78696600A3B796 /* SessionManager.swift in Sources */,
 				1CACCCA72C7C4D3300687EA9 /* TimePicker.swift in Sources */,
 				1C51C8DA2C786D6D00A3B796 /* StepsView.swift in Sources */,

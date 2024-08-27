@@ -14,6 +14,7 @@ final class SessionManager: ObservableObject {
         case Step2
         case Step3
         case Step4
+        case Step5
     }
     
     
@@ -33,6 +34,8 @@ final class SessionManager: ObservableObject {
         case .Step3:
             currentStep = .Step4
         case .Step4:
+            currentStep = .Step5
+        case .Step5:
             break
         case nil:
             currentStep = .Step1
@@ -49,6 +52,8 @@ final class SessionManager: ObservableObject {
             currentStep = .Step2
         case .Step4:
             currentStep = .Step3
+        case .Step5:
+            currentStep = .Step4
         case nil:
             currentStep = .Step1
         }

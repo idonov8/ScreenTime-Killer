@@ -23,14 +23,9 @@ struct WelcomeView: View {
             Text("Screen Time Killer helps you reduce your phone usage by raising the stakes.")
                 .font(.title3).multilineTextAlignment(.center).padding([.leading, .bottom, .trailing], 20.0).padding([.top], 1.0).fontWeight(.light)
             Spacer()
-            Button("Get started, it's free!") {
-                withAnimation {
-                    session.NextStep()
-                }
-            }
-            .buttonStyle(BorderedProminentButtonStyle())
-            .accentColor(.black)
-            .controlSize(.large)
+
+            NextStepButton(nextStep: session.NextStep, title: "Get started, it's free!")
+
         }
     }
 }

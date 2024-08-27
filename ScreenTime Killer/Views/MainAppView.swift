@@ -52,6 +52,10 @@ struct MainAppView: View {
                 SetPriceView()
                     .environmentObject(session)
                     .transition(isBack ? backTransition : transition)
+            case .Step5:
+                GrantPermissionsView()
+                    .environmentObject(session)
+                    .transition(isBack ? backTransition : transition)
             default:
                 // TODO: implement last screen
                 ContentView()

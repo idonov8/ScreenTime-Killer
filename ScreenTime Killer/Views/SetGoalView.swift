@@ -12,9 +12,9 @@ struct SetGoalView: View {
     @EnvironmentObject var session: SessionManager
     
     // TODO: Save information in the session
-    @State var hours: Int = 0
-    @State var minutes: Int = 0
-    @State var days: Int = 0
+    @State var hours: Int = 2
+    @State var minutes: Int = 30
+    @State var days: Int = 7
     var body: some View {
         
         NavigationStack {
@@ -52,14 +52,7 @@ struct SetGoalView: View {
         }
         Spacer()
 
-        Button("Set your price") {
-            withAnimation {
-                session.NextStep()
-            }
-        }
-        .buttonStyle(BorderedProminentButtonStyle())
-        .accentColor(.black)
-        .controlSize(.large)
+        NextStepButton(nextStep: session.NextStep, title: "Set your goal")
     }
 }
 

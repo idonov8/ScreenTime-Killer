@@ -35,18 +35,14 @@ struct SetPriceView: View {
                } onEditingChanged: { editing in
                    isEditing = editing
                }
-            Text("\(price)$")
+            let formattedPrice = String(format: "%.0f", price)
+            Text("\(formattedPrice)$")
                    .foregroundColor(isEditing ? .red : .blue)
-           }
+        }.padding()
         Spacer()
-        Button("Set your price") {
-            withAnimation {
-                session.NextStep()
-            }
-        }
-        .buttonStyle(BorderedProminentButtonStyle())
-        .accentColor(.black)
-        .controlSize(.large)
+
+        NextStepButton(nextStep: session.NextStep, title: "Set your price")
+
     }
 }
 
