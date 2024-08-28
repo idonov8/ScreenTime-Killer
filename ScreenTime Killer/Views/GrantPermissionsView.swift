@@ -38,11 +38,10 @@ struct GrantPermissionsView: View {
                 }
             } else {
                 Button ("grant permissions") {
-                    withAnimation {
-                        requestScreenTimePermission(center: center)
+                    requestScreenTimePermission(center: center)
 
-                        didGetPermission = center.authorizationStatus.rawValue == 2
-                    }
+                    didGetPermission = center.authorizationStatus.rawValue == 2
+                    
                 }
                 Spacer()
             }

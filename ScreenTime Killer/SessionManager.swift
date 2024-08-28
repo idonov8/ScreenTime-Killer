@@ -8,18 +8,36 @@
 import Foundation
 
 final class SessionManager: ObservableObject {
-    enum CurrentStep {
-        case Step1
-        case Step2
-        case Step3
-        case Step4
-        case Step5
-        case Finished
+    
+    enum UserDefaultKeys {
+        static let storedCurrentStep = "currentStep"
     }
-    
-    
-    @Published private(set) var currentStep: CurrentStep?
-//    @Published private(set) var goal: Int32?
+
+    enum CurrentStep: Int {
+        case Step1 = 1
+        case Step2 = 2
+        case Step3 = 3
+        case Step4 = 4
+        case Step5 = 5
+        case Finished = 6
+    }
+
+    @Published private(set) var currentStep: CurrentStep? {
+        didSet {
+            if let step = currentStep {
+                UserDefaults.standard.set(step.rawValue, forKey: UserDefaultKeys.storedCurrentStep)
+            } else {
+                UserDefaults.standard.removeObject(forKey: UserDefaultKeys.storedCurrentStep)
+            }
+        }
+    }
+
+    init() {
+        if let storedStep = UserDefaults.standard.object(forKey: UserDefaultKeys.storedCurrentStep) as? Int,
+           let step = CurrentStep(rawValue: storedStep) {
+            self.currentStep = step
+        }
+    }
     
     func initStep() {
         currentStep = .Step1
