@@ -23,7 +23,4 @@ struct NextStepButton: View {
     }
 }
 
-//#Preview {
-//    NextStepButton()
-//        .environmentObject(SessionManager())
-//}
+

@@ -7,8 +7,20 @@
 
 import SwiftUI
 
+import DeviceActivity
+import FamilyControls
+
+
+func requestScreenTimePermission(center: AuthorizationCenter) {
+    Task {
+        try await center.requestAuthorization(for: .individual)
+    }
+}
+
 struct GrantPermissionsView: View {
     @EnvironmentObject var session: SessionManager
+    let center = AuthorizationCenter.shared
+    @State private var didGetPermission: Bool = false
 
     var body: some View {
         VStack {
@@ -20,8 +32,25 @@ struct GrantPermissionsView: View {
                 .multilineTextAlignment(.center)
                 .fontWeight(.light)
             Spacer()
+            if didGetPermission {
+                Rectangle().hidden().onAppear {
+                    session.NextStep()
+                }
+            } else {
+                Button ("grant permissions") {
+                    withAnimation {
+                        requestScreenTimePermission(center: center)
 
-            NextStepButton(nextStep: session.NextStep, title: "Grant permissions")
+                        didGetPermission = center.authorizationStatus.rawValue == 2
+                    }
+                }
+                Spacer()
+            }
+
+
+//            DeviceActivityReport(context, filter: filter)
+
+//            NextStepButton(nextStep: session.NextStep, title: "Grant permissions")
 
         }
     }
@@ -29,4 +58,5 @@ struct GrantPermissionsView: View {
 
 #Preview {
     GrantPermissionsView()
+        .environmentObject(SessionManager())
 }

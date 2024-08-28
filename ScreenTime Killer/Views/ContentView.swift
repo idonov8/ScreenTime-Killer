@@ -6,9 +6,20 @@
 //
 
 import SwiftUI
+import _DeviceActivity_SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var session: SessionManager
+    @State private var context: DeviceActivityReport.Context = .init(rawValue: "Total Activity")
+    @State private var filter = DeviceActivityFilter(
+          segment: .daily(
+              during: Calendar.current.dateInterval(
+                 of: .weekOfYear, for: .now
+              )!
+          ),
+          users: .children,
+          devices: .init([.iPhone, .iPad])
+      )
     
     var body: some View {
         Image("zombie-phone")
@@ -21,6 +32,7 @@ struct ContentView: View {
             .padding(.bottom, -140)
             .offset(y: -80)
        Text("I'm watching you...")
+        DeviceActivityReport.init(context)
     }
 }
 
@@ -28,10 +40,3 @@ struct ContentView: View {
     ContentView()
         .environmentObject(SessionManager())
 }
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//               .environmentObject(SessionManager())
-//    }
-//}

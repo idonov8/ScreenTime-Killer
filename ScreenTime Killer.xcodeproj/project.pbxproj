@@ -13,7 +13,6 @@
 		1C51C8D82C786B1900A3B796 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D72C786B1900A3B796 /* WelcomeView.swift */; };
 		1C51C8DA2C786D6D00A3B796 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8D92C786D6D00A3B796 /* StepsView.swift */; };
 		1C51C8DC2C7B051600A3B796 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51C8DB2C7B051600A3B796 /* MainAppView.swift */; };
-		1C6FA8282C759FA200C9CF97 /* ScreenTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */; };
 		1C8FBCEA2C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */; };
 		1C8FBCEC2C74AA3F00F6E5AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */; };
 		1C8FBCEE2C74AA4100F6E5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8FBCED2C74AA4100F6E5AC /* Assets.xcassets */; };
@@ -66,7 +65,6 @@
 		1C51C8D72C786B1900A3B796 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1C51C8D92C786D6D00A3B796 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
 		1C51C8DB2C7B051600A3B796 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
-		1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeView.swift; sourceTree = "<group>"; };
 		1C8FBCE62C74AA3F00F6E5AC /* ScreenTime Killer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScreenTime Killer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8FBCE92C74AA3F00F6E5AC /* ScreenTime_KillerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerApp.swift; sourceTree = "<group>"; };
 		1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				1C374DF72C7B269D0098C9A8 /* SetGoalView.swift */,
 				1CA6D51D2C7C62A400525341 /* SetPriceView.swift */,
 				1C51C8D92C786D6D00A3B796 /* StepsView.swift */,
-				1C6FA8272C759FA200C9CF97 /* ScreenTimeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,7 +341,6 @@
 				1C51C8DA2C786D6D00A3B796 /* StepsView.swift in Sources */,
 				1C51C8D82C786B1900A3B796 /* WelcomeView.swift in Sources */,
 				1C51C8DC2C7B051600A3B796 /* MainAppView.swift in Sources */,
-				1C6FA8282C759FA200C9CF97 /* ScreenTimeView.swift in Sources */,
 				1C51C8CF2C785A5400A3B796 /* CircularLogo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,10 +503,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ScreenTime Killer/ScreenTime Killer.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTime Killer/Preview Content\"";
-				DEVELOPMENT_TEAM = P3C6CS29H2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -527,6 +523,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -539,10 +536,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ScreenTime Killer/ScreenTime Killer.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTime Killer/Preview Content\"";
-				DEVELOPMENT_TEAM = P3C6CS29H2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -559,6 +556,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

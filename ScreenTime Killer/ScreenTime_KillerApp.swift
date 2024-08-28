@@ -9,8 +9,7 @@ import SwiftUI
 
 @main
 struct ScreenTime_KillerApp: App {
-    @StateObject private var session = SessionManager()
-    
+
     var body: some Scene {
         WindowGroup {
             MainAppView()

@@ -16,8 +16,8 @@ struct MainAppView: View {
             removal: .move(edge: .leading).combined(with: .opacity)
         )
 
-    let backTransition: AnyTransition = .slide
-    
+    let backTransition: AnyTransition = .slide.combined(with: .opacity)
+
 
     var body: some View {
         VStack {
@@ -61,7 +61,9 @@ struct MainAppView: View {
                 ContentView()
                     .environmentObject(session)
                     .onAppear {
-                        session.initStep()
+                        if session.currentStep != .Finished {
+                            session.initStep()
+                        }
                     }
             }
         }
