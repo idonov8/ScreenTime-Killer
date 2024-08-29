@@ -15,6 +15,7 @@ final class SessionManager: ObservableObject {
         static let storedMinutes = "usageGoalMinutes"
         static let storedDays = "usageGoalDays"
         static let storedGoalSetDate = "usageGoalSetDate"
+        static let storedRiskAmount = "riskAmount"
     }
 
     enum CurrentStep: Int {
@@ -59,6 +60,12 @@ final class SessionManager: ObservableObject {
             UserDefaults.standard.set(goalSetDate, forKey: UserDefaultKeys.storedGoalSetDate)
         }
     }
+    
+    @Published var riskAmount: Double {
+        didSet {
+            UserDefaults.standard.set(riskAmount, forKey: UserDefaultKeys.storedRiskAmount)
+        }
+    }
 
     init() {
         // Initialize current step
@@ -80,6 +87,10 @@ final class SessionManager: ObservableObject {
         } else {
             self.goalSetDate = Date()
         }
+        
+        // Initialize risk amount
+        self.riskAmount = UserDefaults.standard.double(forKey: UserDefaultKeys.storedRiskAmount)
+
     }
     
     func initStep() {
@@ -129,5 +140,9 @@ final class SessionManager: ObservableObject {
         self.minutes = minutes
         self.days = days
         self.goalSetDate = Date()
+    }
+    
+    func setRiskAmount(_ amount: Double) {
+        self.riskAmount = amount
     }
 }

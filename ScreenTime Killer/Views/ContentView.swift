@@ -75,6 +75,13 @@ struct ContentView: View {
                            .font(.subheadline)
                            .foregroundColor(daysLeft > 0 ? .primary : .red)
                    }
+            
+                    VStack(alignment: .leading) {
+                        Text("Amount at Risk:")
+                            .font(.headline)
+                        Text("$\(session.riskAmount, specifier: "%.2f")")
+                            .font(.subheadline)
+                    }
                    
                    if daysLeft == 0 {
                        Text("Goal period completed!")

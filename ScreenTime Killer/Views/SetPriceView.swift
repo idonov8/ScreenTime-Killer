@@ -41,7 +41,10 @@ struct SetPriceView: View {
         }.padding()
         Spacer()
 
-        NextStepButton(nextStep: session.NextStep, title: "Set your price")
+        NextStepButton(nextStep: {
+            session.setRiskAmount(price)
+            session.NextStep()
+        }, title: "Set your price")
 
     }
 }
