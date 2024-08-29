@@ -16,7 +16,6 @@ struct SetGoalView: View {
     @State var minutes: Int = 30
     @State var days: Int = 7
     var body: some View {
-        
         NavigationStack {
             VStack {
                 Text("Set your goal ⛳")
@@ -52,7 +51,10 @@ struct SetGoalView: View {
         }
         Spacer()
 
-        NextStepButton(nextStep: session.NextStep, title: "Set your goal")
+        NextStepButton(nextStep: {
+            session.setUsageGoal(hours: self.hours, minutes: minutes, days: days)
+            session.NextStep()
+        }, title: "Set your goal")
     }
 }
 

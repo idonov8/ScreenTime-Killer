@@ -11,6 +11,10 @@ final class SessionManager: ObservableObject {
     
     enum UserDefaultKeys {
         static let storedCurrentStep = "currentStep"
+        static let storedHours = "usageGoalHours"
+        static let storedMinutes = "usageGoalMinutes"
+        static let storedDays = "usageGoalDays"
+        static let storedGoalSetDate = "usageGoalSetDate"
     }
 
     enum CurrentStep: Int {
@@ -32,10 +36,49 @@ final class SessionManager: ObservableObject {
         }
     }
 
+    @Published var hours: Int {
+        didSet {
+            UserDefaults.standard.set(hours, forKey: UserDefaultKeys.storedHours)
+        }
+    }
+
+    @Published var minutes: Int {
+        didSet {
+            UserDefaults.standard.set(minutes, forKey: UserDefaultKeys.storedMinutes)
+        }
+    }
+
+    @Published var days: Int {
+        didSet {
+            UserDefaults.standard.set(days, forKey: UserDefaultKeys.storedDays)
+        }
+    }
+
+    @Published var goalSetDate: Date {
+        didSet {
+            UserDefaults.standard.set(goalSetDate, forKey: UserDefaultKeys.storedGoalSetDate)
+        }
+    }
+
     init() {
+        // Initialize current step
         if let storedStep = UserDefaults.standard.object(forKey: UserDefaultKeys.storedCurrentStep) as? Int,
            let step = CurrentStep(rawValue: storedStep) {
             self.currentStep = step
+        } else {
+            self.currentStep = .Step1
+        }
+
+        // Initialize usage goal data
+        self.hours = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedHours)
+        self.minutes = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedMinutes)
+        self.days = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedDays)
+
+        // Initialize goal set date
+        if let date = UserDefaults.standard.object(forKey: UserDefaultKeys.storedGoalSetDate) as? Date {
+            self.goalSetDate = date
+        } else {
+            self.goalSetDate = Date()
         }
     }
     
@@ -79,5 +122,12 @@ final class SessionManager: ObservableObject {
         case nil:
             currentStep = .Step1
         }
+    }
+
+    func setUsageGoal(hours: Int, minutes: Int, days: Int) {
+        self.hours = hours
+        self.minutes = minutes
+        self.days = days
+        self.goalSetDate = Date()
     }
 }

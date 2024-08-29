@@ -22,6 +22,19 @@ struct ContentView: View {
       )
     
     var body: some View {
+        var daysLeft: Int {
+                let calendar = Calendar.current
+                let goalEndDate = calendar.date(byAdding: .day, value: session.days, to: session.goalSetDate)!
+                let now = Date()
+                
+                if now >= goalEndDate {
+                    return 0
+                } else {
+                    let components = calendar.dateComponents([.day], from: now, to: goalEndDate)
+                    return components.day ?? 0
+                }
+            }
+        
         Image("zombie-phone")
             .resizable()
             .offset(x: -11)
@@ -32,9 +45,50 @@ struct ContentView: View {
             .padding(.bottom, -140)
             .offset(y: -80)
        Text("I'm watching you...")
-        DeviceActivityReport.init(context)
+        VStack(alignment: .leading, spacing: 20) {
+                   Text("Your Usage Goal")
+                       .font(.title)
+                       .fontWeight(.bold)
+                   
+                   HStack {
+                       VStack(alignment: .leading) {
+                           Text("Daily Goal:")
+                               .font(.headline)
+                           Text("\(session.hours) hours \(session.minutes) minutes")
+                               .font(.subheadline)
+                       }
+                       
+                       Spacer()
+                       
+                       VStack(alignment: .trailing) {
+                           Text("Goal Period:")
+                               .font(.headline)
+                           Text("\(session.days) days")
+                               .font(.subheadline)
+                       }
+                   }
+                   
+                   VStack(alignment: .leading) {
+                       Text("Time Left:")
+                           .font(.headline)
+                       Text("\(daysLeft) days")
+                           .font(.subheadline)
+                           .foregroundColor(daysLeft > 0 ? .primary : .red)
+                   }
+                   
+                   if daysLeft == 0 {
+                       Text("Goal period completed!")
+                           .font(.headline)
+                           .foregroundColor(.green)
+                   }
+                   
+                   Spacer()
+               }
+               .padding()
+           }
+//        DeviceActivityReport.init(context)
     }
-}
+
 
 #Preview {
     ContentView()
