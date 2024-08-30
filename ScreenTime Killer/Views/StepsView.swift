@@ -33,7 +33,7 @@ struct StepsView: View {
                 
         }
         .padding(.horizontal, 18)
-        .fontDesign(.rounded)
+//        .fontDesign(.rounded)
         .fontWeight(.light)
         .font(.system(size: 24))
         .fixedSize(horizontal: false, vertical: true)

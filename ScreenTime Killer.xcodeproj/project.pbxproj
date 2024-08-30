@@ -20,10 +20,15 @@
 		1C8FBCFB2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCFA2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift */; };
 		1C8FBD052C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */; };
 		1C8FBD072C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */; };
+		1C9D57202C81B410006B3C6B /* DeviceActivityReportExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtention.swift */; };
+		1C9D57222C81B410006B3C6B /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D57212C81B410006B3C6B /* TotalActivityReport.swift */; };
+		1C9D57242C81B410006B3C6B /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D57232C81B410006B3C6B /* TotalActivityView.swift */; };
+		1C9D57292C81B410006B3C6B /* DeviceActivityReportExtention.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 1C9D571D2C81B410006B3C6B /* DeviceActivityReportExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1CA5514B2C7B1EB8002CAF37 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1CA5514A2C7B1EB8002CAF37 /* PhosphorSwift */; };
 		1CA6D51E2C7C62A400525341 /* SetPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51D2C7C62A400525341 /* SetPriceView.swift */; };
 		1CA6D5202C7DAA4E00525341 /* GrantPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */; };
 		1CA6D5222C7DAADB00525341 /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D5212C7DAADB00525341 /* NextStepButton.swift */; };
+		1CA6D5272C804CF900525341 /* RemainingScreenTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D5262C804CF900525341 /* RemainingScreenTimeView.swift */; };
 		1CACCCA72C7C4D3300687EA9 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CACCCA62C7C4D3300687EA9 /* TimePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +47,13 @@
 			remoteGlobalIDString = 1C8FBCE52C74AA3F00F6E5AC;
 			remoteInfo = "ScreenTime Killer";
 		};
+		1C9D57272C81B410006B3C6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C8FBCDE2C74AA3F00F6E5AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C9D571C2C81B410006B3C6B;
+			remoteInfo = DeviceActivityReportExtention;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +63,7 @@
 			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
+				1C9D57292C81B410006B3C6B /* DeviceActivityReportExtention.appex in Embed ExtensionKit Extensions */,
 			);
 			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,9 +88,17 @@
 		1C8FBD002C74AA4100F6E5AC /* ScreenTime KillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScreenTime KillerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITests.swift; sourceTree = "<group>"; };
 		1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1C9D571D2C81B410006B3C6B /* DeviceActivityReportExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = DeviceActivityReportExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportExtention.swift; sourceTree = "<group>"; };
+		1C9D57212C81B410006B3C6B /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
+		1C9D57232C81B410006B3C6B /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
+		1C9D57252C81B410006B3C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C9D57262C81B410006B3C6B /* DeviceActivityReportExtention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityReportExtention.entitlements; sourceTree = "<group>"; };
 		1CA6D51D2C7C62A400525341 /* SetPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceView.swift; sourceTree = "<group>"; };
 		1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrantPermissionsView.swift; sourceTree = "<group>"; };
 		1CA6D5212C7DAADB00525341 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextStepButton.swift; path = "ScreenTime Killer/Components/NextStepButton.swift"; sourceTree = SOURCE_ROOT; };
+		1CA6D5262C804CF900525341 /* RemainingScreenTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingScreenTimeView.swift; sourceTree = "<group>"; };
+		1CA6D5282C80609900525341 /* ScreenTime-Killer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ScreenTime-Killer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1CACCCA62C7C4D3300687EA9 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +125,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1C9D571A2C81B410006B3C6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,6 +141,7 @@
 				1C51C8DB2C7B051600A3B796 /* MainAppView.swift */,
 				1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */,
 				1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */,
+				1CA6D5262C804CF900525341 /* RemainingScreenTimeView.swift */,
 				1C51C8D72C786B1900A3B796 /* WelcomeView.swift */,
 				1C374DF72C7B269D0098C9A8 /* SetGoalView.swift */,
 				1CA6D51D2C7C62A400525341 /* SetPriceView.swift */,
@@ -127,6 +156,7 @@
 				1C8FBCE82C74AA3F00F6E5AC /* ScreenTime Killer */,
 				1C8FBCF92C74AA4100F6E5AC /* ScreenTime KillerTests */,
 				1C8FBD032C74AA4100F6E5AC /* ScreenTime KillerUITests */,
+				1C9D571E2C81B410006B3C6B /* DeviceActivityReportExtention */,
 				1C8FBCE72C74AA3F00F6E5AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +167,7 @@
 				1C8FBCE62C74AA3F00F6E5AC /* ScreenTime Killer.app */,
 				1C8FBCF62C74AA4100F6E5AC /* ScreenTime KillerTests.xctest */,
 				1C8FBD002C74AA4100F6E5AC /* ScreenTime KillerUITests.xctest */,
+				1C9D571D2C81B410006B3C6B /* DeviceActivityReportExtention.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +175,7 @@
 		1C8FBCE82C74AA3F00F6E5AC /* ScreenTime Killer */ = {
 			isa = PBXGroup;
 			children = (
+				1CA6D5282C80609900525341 /* ScreenTime-Killer-Info.plist */,
 				1CA6D5232C7DAAE900525341 /* Components */,
 				1C51C8D12C78641700A3B796 /* Views */,
 				1C39911A2C75AF2300CECE2D /* ScreenTime Killer.entitlements */,
@@ -180,6 +212,18 @@
 			path = "ScreenTime KillerUITests";
 			sourceTree = "<group>";
 		};
+		1C9D571E2C81B410006B3C6B /* DeviceActivityReportExtention */ = {
+			isa = PBXGroup;
+			children = (
+				1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtention.swift */,
+				1C9D57212C81B410006B3C6B /* TotalActivityReport.swift */,
+				1C9D57232C81B410006B3C6B /* TotalActivityView.swift */,
+				1C9D57252C81B410006B3C6B /* Info.plist */,
+				1C9D57262C81B410006B3C6B /* DeviceActivityReportExtention.entitlements */,
+			);
+			path = DeviceActivityReportExtention;
+			sourceTree = "<group>";
+		};
 		1CA6D5232C7DAAE900525341 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +249,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1C9D57282C81B410006B3C6B /* PBXTargetDependency */,
 			);
 			name = "ScreenTime Killer";
 			packageProductDependencies = (
@@ -250,6 +295,23 @@
 			productReference = 1C8FBD002C74AA4100F6E5AC /* ScreenTime KillerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1C9D571C2C81B410006B3C6B /* DeviceActivityReportExtention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9D572A2C81B410006B3C6B /* Build configuration list for PBXNativeTarget "DeviceActivityReportExtention" */;
+			buildPhases = (
+				1C9D57192C81B410006B3C6B /* Sources */,
+				1C9D571A2C81B410006B3C6B /* Frameworks */,
+				1C9D571B2C81B410006B3C6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeviceActivityReportExtention;
+			productName = DeviceActivityReportExtention;
+			productReference = 1C9D571D2C81B410006B3C6B /* DeviceActivityReportExtention.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,6 +336,9 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 1C8FBCE52C74AA3F00F6E5AC;
 					};
+					1C9D571C2C81B410006B3C6B = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = 1C8FBCE12C74AA3F00F6E5AC /* Build configuration list for PBXProject "ScreenTime Killer" */;
@@ -295,6 +360,7 @@
 				1C8FBCE52C74AA3F00F6E5AC /* ScreenTime Killer */,
 				1C8FBCF52C74AA4100F6E5AC /* ScreenTime KillerTests */,
 				1C8FBCFF2C74AA4100F6E5AC /* ScreenTime KillerUITests */,
+				1C9D571C2C81B410006B3C6B /* DeviceActivityReportExtention */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +389,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1C9D571B2C81B410006B3C6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -340,6 +413,7 @@
 				1CACCCA72C7C4D3300687EA9 /* TimePicker.swift in Sources */,
 				1C51C8DA2C786D6D00A3B796 /* StepsView.swift in Sources */,
 				1C51C8D82C786B1900A3B796 /* WelcomeView.swift in Sources */,
+				1CA6D5272C804CF900525341 /* RemainingScreenTimeView.swift in Sources */,
 				1C51C8DC2C7B051600A3B796 /* MainAppView.swift in Sources */,
 				1C51C8CF2C785A5400A3B796 /* CircularLogo.swift in Sources */,
 			);
@@ -362,6 +436,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1C9D57192C81B410006B3C6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9D57242C81B410006B3C6B /* TotalActivityView.swift in Sources */,
+				1C9D57202C81B410006B3C6B /* DeviceActivityReportExtention.swift in Sources */,
+				1C9D57222C81B410006B3C6B /* TotalActivityReport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -374,6 +458,11 @@
 			isa = PBXTargetDependency;
 			target = 1C8FBCE52C74AA3F00F6E5AC /* ScreenTime Killer */;
 			targetProxy = 1C8FBD012C74AA4100F6E5AC /* PBXContainerItemProxy */;
+		};
+		1C9D57282C81B410006B3C6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C9D571C2C81B410006B3C6B /* DeviceActivityReportExtention */;
+			targetProxy = 1C9D57272C81B410006B3C6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -500,22 +589,27 @@
 		1C8FBD0B2C74AA4100F6E5AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ScreenTime Killer/ScreenTime Killer.entitlements";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTime Killer/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P3C6CS29H2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ScreenTime-Killer-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,6 +618,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -533,22 +631,27 @@
 		1C8FBD0C2C74AA4100F6E5AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ScreenTime Killer/ScreenTime Killer.entitlements";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScreenTime Killer/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P3C6CS29H2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ScreenTime-Killer-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,6 +660,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -635,6 +742,62 @@
 			};
 			name = Release;
 		};
+		1C9D572B2C81B410006B3C6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityReportExtention/DeviceActivityReportExtention.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P3C6CS29H2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityReportExtention/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityReportExtention;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer.DeviceActivityReportExtention";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C9D572C2C81B410006B3C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = DeviceActivityReportExtention/DeviceActivityReportExtention.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P3C6CS29H2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivityReportExtention/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivityReportExtention;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer.DeviceActivityReportExtention";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -670,6 +833,15 @@
 			buildConfigurations = (
 				1C8FBD112C74AA4100F6E5AC /* Debug */,
 				1C8FBD122C74AA4100F6E5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9D572A2C81B410006B3C6B /* Build configuration list for PBXNativeTarget "DeviceActivityReportExtention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9D572B2C81B410006B3C6B /* Debug */,
+				1C9D572C2C81B410006B3C6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

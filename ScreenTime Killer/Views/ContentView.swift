@@ -6,20 +6,11 @@
 //
 
 import SwiftUI
-import _DeviceActivity_SwiftUI
+
 
 struct ContentView: View {
     @EnvironmentObject var session: SessionManager
-    @State private var context: DeviceActivityReport.Context = .init(rawValue: "Total Activity")
-    @State private var filter = DeviceActivityFilter(
-          segment: .daily(
-              during: Calendar.current.dateInterval(
-                 of: .weekOfYear, for: .now
-              )!
-          ),
-          users: .children,
-          devices: .init([.iPhone, .iPad])
-      )
+
     
     var body: some View {
         var daysLeft: Int {
@@ -82,6 +73,8 @@ struct ContentView: View {
                         Text("$\(session.riskAmount, specifier: "%.2f")")
                             .font(.subheadline)
                     }
+            
+                    RemainingScreenTimeView()
                    
                    if daysLeft == 0 {
                        Text("Goal period completed!")
