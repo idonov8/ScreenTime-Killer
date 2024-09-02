@@ -52,7 +52,8 @@ struct SetGoalView: View {
         Spacer()
 
         NextStepButton(nextStep: {
-            session.setUsageGoal(hours: self.hours, minutes: minutes, days: days)
+            let totalDuration = TimeInterval(hours * 3600 + minutes * 60)
+            session.setUsageGoal(duration: totalDuration, days: days)
             session.NextStep()
         }, title: "Set your goal")
     }

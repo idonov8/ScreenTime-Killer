@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         var daysLeft: Int {
                 let calendar = Calendar.current
-                let goalEndDate = calendar.date(byAdding: .day, value: session.days, to: session.goalSetDate)!
+            let goalEndDate = calendar.date(byAdding: .day, value: session.usageGoalDays, to: session.goalSetDate)!
                 let now = Date()
                 
                 if now >= goalEndDate {
@@ -45,7 +45,11 @@ struct ContentView: View {
                        VStack(alignment: .leading) {
                            Text("Daily Goal:")
                                .font(.headline)
-                           Text("\(session.hours) hours \(session.minutes) minutes")
+                           let totalSeconds = Int(session.usageGoalDuration)
+                           let hours = totalSeconds / 3600
+                           let minutes = (totalSeconds % 3600) / 60
+
+                           Text("\(hours) hours \(minutes) minutes")
                                .font(.subheadline)
                        }
                        
@@ -54,7 +58,7 @@ struct ContentView: View {
                        VStack(alignment: .trailing) {
                            Text("Goal Period:")
                                .font(.headline)
-                           Text("\(session.days) days")
+                           Text("\(session.usageGoalDays) days")
                                .font(.subheadline)
                        }
                    }

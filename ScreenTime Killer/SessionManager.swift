@@ -10,13 +10,12 @@ import Foundation
 final class SessionManager: ObservableObject {
     
     enum UserDefaultKeys {
-        static let storedCurrentStep = "currentStep"
-        static let storedHours = "usageGoalHours"
-        static let storedMinutes = "usageGoalMinutes"
-        static let storedDays = "usageGoalDays"
-        static let storedGoalSetDate = "usageGoalSetDate"
-        static let storedRiskAmount = "riskAmount"
-    }
+       static let storedCurrentStep = "currentStep"
+       static let storedUsageGoalDuration = "usageGoalDuration"
+       static let storedUsageGoalDays = "usageGoalDays"
+       static let storedGoalSetDate = "usageGoalSetDate"
+       static let storedRiskAmount = "riskAmount"
+   }
 
     enum CurrentStep: Int {
         case Step1 = 1
@@ -37,21 +36,15 @@ final class SessionManager: ObservableObject {
         }
     }
 
-    @Published var hours: Int {
+    @Published var usageGoalDuration: TimeInterval {
         didSet {
-            UserDefaults.standard.set(hours, forKey: UserDefaultKeys.storedHours)
+            UserDefaults.standard.set(usageGoalDuration, forKey: UserDefaultKeys.storedUsageGoalDuration)
         }
     }
 
-    @Published var minutes: Int {
+    @Published var usageGoalDays: Int {
         didSet {
-            UserDefaults.standard.set(minutes, forKey: UserDefaultKeys.storedMinutes)
-        }
-    }
-
-    @Published var days: Int {
-        didSet {
-            UserDefaults.standard.set(days, forKey: UserDefaultKeys.storedDays)
+            UserDefaults.standard.set(usageGoalDays, forKey: UserDefaultKeys.storedUsageGoalDays)
         }
     }
 
@@ -76,10 +69,9 @@ final class SessionManager: ObservableObject {
             self.currentStep = .Step1
         }
 
-        // Initialize usage goal data
-        self.hours = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedHours)
-        self.minutes = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedMinutes)
-        self.days = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedDays)
+        // Initialize usage goal
+        self.usageGoalDuration = UserDefaults.standard.double(forKey: UserDefaultKeys.storedUsageGoalDuration)
+        self.usageGoalDays = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedUsageGoalDays)
 
         // Initialize goal set date
         if let date = UserDefaults.standard.object(forKey: UserDefaultKeys.storedGoalSetDate) as? Date {
@@ -135,10 +127,9 @@ final class SessionManager: ObservableObject {
         }
     }
 
-    func setUsageGoal(hours: Int, minutes: Int, days: Int) {
-        self.hours = hours
-        self.minutes = minutes
-        self.days = days
+    func setUsageGoal(duration: TimeInterval, days: Int) {
+        self.usageGoalDuration = duration
+        self.usageGoalDays = days
         self.goalSetDate = Date()
     }
     
