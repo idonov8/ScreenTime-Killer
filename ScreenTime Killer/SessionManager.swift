@@ -131,8 +131,30 @@ final class SessionManager: ObservableObject {
         self.usageGoalDuration = duration
         self.usageGoalDays = days
         self.goalSetDate = Date()
+        saveUsageGoalToAppGroup(duration)
     }
-    
+
+    func saveUsageGoalToAppGroup(_ duration: TimeInterval) {
+        // Step 1: Get the URL for the shared app group directory
+        if let groupURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.screen-time-goal") {
+            // Step 2: Append the file name to the directory path
+            let fileURL = groupURL.appendingPathComponent("usageGoalDuration.plist")
+            
+            // Step 3: Create a dictionary with your data (or just a single value)
+            let dataToSave: [String: TimeInterval] = ["usageGoalDuration": duration]
+            
+            // Step 4: Save the dictionary to the file as a plist
+            do {
+                let data = try PropertyListEncoder().encode(dataToSave)
+                try data.write(to: fileURL)
+                print("Successfully saved usageGoalDuration to file.")
+            } catch {
+                // TODO: handle error
+                print("Failed to save usageGoalDuration: \(error)")
+            }
+        }
+    }
+
     func setRiskAmount(_ amount: Double) {
         self.riskAmount = amount
     }

@@ -20,10 +20,12 @@
 		1C8FBCFB2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBCFA2C74AA4100F6E5AC /* ScreenTime_KillerTests.swift */; };
 		1C8FBD052C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */; };
 		1C8FBD072C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */; };
-		1C9D57202C81B410006B3C6B /* DeviceActivityReportExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtention.swift */; };
+		1C9D57202C81B410006B3C6B /* DeviceActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtension.swift */; };
 		1C9D57222C81B410006B3C6B /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D57212C81B410006B3C6B /* TotalActivityReport.swift */; };
 		1C9D57242C81B410006B3C6B /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D57232C81B410006B3C6B /* TotalActivityView.swift */; };
 		1C9D57292C81B410006B3C6B /* DeviceActivityReportExtention.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 1C9D571D2C81B410006B3C6B /* DeviceActivityReportExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1C9D57302C858256006B3C6B /* TimeLeftTodayReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D572F2C858256006B3C6B /* TimeLeftTodayReport.swift */; };
+		1C9D57322C85B1AD006B3C6B /* TimeLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D57312C85B1AD006B3C6B /* TimeLeftView.swift */; };
 		1CA5514B2C7B1EB8002CAF37 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1CA5514A2C7B1EB8002CAF37 /* PhosphorSwift */; };
 		1CA6D51E2C7C62A400525341 /* SetPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51D2C7C62A400525341 /* SetPriceView.swift */; };
 		1CA6D5202C7DAA4E00525341 /* GrantPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */; };
@@ -89,11 +91,13 @@
 		1C8FBD042C74AA4100F6E5AC /* ScreenTime_KillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITests.swift; sourceTree = "<group>"; };
 		1C8FBD062C74AA4100F6E5AC /* ScreenTime_KillerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime_KillerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1C9D571D2C81B410006B3C6B /* DeviceActivityReportExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = DeviceActivityReportExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportExtention.swift; sourceTree = "<group>"; };
+		1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportExtension.swift; sourceTree = "<group>"; };
 		1C9D57212C81B410006B3C6B /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
 		1C9D57232C81B410006B3C6B /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
 		1C9D57252C81B410006B3C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C9D57262C81B410006B3C6B /* DeviceActivityReportExtention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityReportExtention.entitlements; sourceTree = "<group>"; };
+		1C9D572F2C858256006B3C6B /* TimeLeftTodayReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLeftTodayReport.swift; sourceTree = "<group>"; };
+		1C9D57312C85B1AD006B3C6B /* TimeLeftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLeftView.swift; sourceTree = "<group>"; };
 		1CA6D51D2C7C62A400525341 /* SetPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceView.swift; sourceTree = "<group>"; };
 		1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrantPermissionsView.swift; sourceTree = "<group>"; };
 		1CA6D5212C7DAADB00525341 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextStepButton.swift; path = "ScreenTime Killer/Components/NextStepButton.swift"; sourceTree = SOURCE_ROOT; };
@@ -215,9 +219,11 @@
 		1C9D571E2C81B410006B3C6B /* DeviceActivityReportExtention */ = {
 			isa = PBXGroup;
 			children = (
-				1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtention.swift */,
+				1C9D571F2C81B410006B3C6B /* DeviceActivityReportExtension.swift */,
 				1C9D57212C81B410006B3C6B /* TotalActivityReport.swift */,
+				1C9D572F2C858256006B3C6B /* TimeLeftTodayReport.swift */,
 				1C9D57232C81B410006B3C6B /* TotalActivityView.swift */,
+				1C9D57312C85B1AD006B3C6B /* TimeLeftView.swift */,
 				1C9D57252C81B410006B3C6B /* Info.plist */,
 				1C9D57262C81B410006B3C6B /* DeviceActivityReportExtention.entitlements */,
 			);
@@ -441,7 +447,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C9D57242C81B410006B3C6B /* TotalActivityView.swift in Sources */,
-				1C9D57202C81B410006B3C6B /* DeviceActivityReportExtention.swift in Sources */,
+				1C9D57322C85B1AD006B3C6B /* TimeLeftView.swift in Sources */,
+				1C9D57202C81B410006B3C6B /* DeviceActivityReportExtension.swift in Sources */,
+				1C9D57302C858256006B3C6B /* TimeLeftTodayReport.swift in Sources */,
 				1C9D57222C81B410006B3C6B /* TotalActivityReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +533,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -581,6 +591,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -618,6 +629,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -660,6 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -764,6 +777,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer.DeviceActivityReportExtention";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -792,6 +806,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "idonov.ScreenTime-Killer.DeviceActivityReportExtention";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

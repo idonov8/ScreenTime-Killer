@@ -78,7 +78,7 @@ struct ContentView: View {
                             .font(.subheadline)
                     }
             
-                    RemainingScreenTimeView()
+                    RemainingScreenTimeView().environmentObject(session)
                    
                    if daysLeft == 0 {
                        Text("Goal period completed!")

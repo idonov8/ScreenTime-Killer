@@ -15,6 +15,7 @@ extension DeviceActivityReport.Context {
     static let totalActivity = Self("Total Activity")
 }
 
+
 struct TotalActivityReport: DeviceActivityReportScene {
     // Define which context your scene will represent.
     let context: DeviceActivityReport.Context = .totalActivity
@@ -26,9 +27,9 @@ struct TotalActivityReport: DeviceActivityReportScene {
         // Reformat the data into a configuration that can be used to create
         // the report's view.
         let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.day, .hour, .minute, .second]
+        formatter.allowedUnits = [.hour, .minute, .second]
         formatter.unitsStyle = .abbreviated
-        formatter.zeroFormattingBehavior = .dropAll
+//        formatter.zeroFormattingBehavior = .dropAll
         
         let totalActivityDuration = await data.flatMap { $0.activitySegments }.reduce(0, {
             $0 + $1.totalActivityDuration
