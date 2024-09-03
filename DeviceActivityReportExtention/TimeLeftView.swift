@@ -9,16 +9,8 @@ import SwiftUI
 
 struct TimeLeftView: View {
     let totalRemainingActivity: String
-//    let userSetGoal: TimeInterval
 
     var body: some View {
-//        let formatter = DateComponentsFormatter()
-//        formatter.allowedUnits = [.hour, .minute, .second]
-////        formatter.unitsStyle = .abbreviated
-//
-//        let totalActivityTime = TimeInterval(Double(totalRemainingActivity) ?? 6.5*3600)
-//        let remainingTime = userSetGoal - totalActivityTime
-
         Text(totalRemainingActivity)
     }
 }

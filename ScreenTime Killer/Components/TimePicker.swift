@@ -56,14 +56,14 @@ struct PickerViewWithoutIndicator<Content: View, Selection: Hashable>: View {
     
     var body: some View {
         Picker("", selection: $selection) {
+            // TODO: fix it, the background is not removed for the second wheel.
             if !isHidden {
                 RemovePickerIndicator {
                     isHidden = true
                 }
             }
-        
             content
-    
+
         }
         .pickerStyle(.wheel)
     }

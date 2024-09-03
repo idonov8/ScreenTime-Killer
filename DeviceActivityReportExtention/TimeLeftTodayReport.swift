@@ -55,7 +55,7 @@ struct TimeLeftTodayReport: DeviceActivityReportScene {
         })
         
         let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.allowedUnits = [.hour, .minute]
         formatter.unitsStyle = .abbreviated
 
         // Reading the usage goal duration

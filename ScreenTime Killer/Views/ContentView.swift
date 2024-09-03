@@ -37,34 +37,10 @@ struct ContentView: View {
             .offset(y: -80)
        Text("I'm watching you...")
         VStack(alignment: .leading, spacing: 20) {
-                   Text("Your Usage Goal")
-                       .font(.title)
-                       .fontWeight(.bold)
-                   
-                   HStack {
-                       VStack(alignment: .leading) {
-                           Text("Daily Goal:")
-                               .font(.headline)
-                           let totalSeconds = Int(session.usageGoalDuration)
-                           let hours = totalSeconds / 3600
-                           let minutes = (totalSeconds % 3600) / 60
-
-                           Text("\(hours) hours \(minutes) minutes")
-                               .font(.subheadline)
-                       }
-                       
-                       Spacer()
-                       
-                       VStack(alignment: .trailing) {
-                           Text("Goal Period:")
-                               .font(.headline)
-                           Text("\(session.usageGoalDays) days")
-                               .font(.subheadline)
-                       }
-                   }
                    
                    VStack(alignment: .leading) {
-                       Text("Time Left:")
+                       RemainingScreenTimeView().environmentObject(session).scaledToFit()
+                       Text("Days left to reach the goal:")
                            .font(.headline)
                        Text("\(daysLeft) days")
                            .font(.subheadline)
@@ -72,13 +48,13 @@ struct ContentView: View {
                    }
             
                     VStack(alignment: .leading) {
-                        Text("Amount at Risk:")
+                        Text("Pledged price:")
                             .font(.headline)
                         Text("$\(session.riskAmount, specifier: "%.2f")")
                             .font(.subheadline)
                     }
             
-                    RemainingScreenTimeView().environmentObject(session)
+                    
                    
                    if daysLeft == 0 {
                        Text("Goal period completed!")
