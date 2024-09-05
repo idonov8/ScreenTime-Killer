@@ -25,7 +25,7 @@ struct SetPriceView: View {
                Slider(
                    value: $price,
                    in: 1...1000,
-                   step: 1
+                   step: 10
                ) {
                    Text("$")
                }  minimumValueLabel: {
