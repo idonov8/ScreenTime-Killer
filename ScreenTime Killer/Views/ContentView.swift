@@ -26,7 +26,7 @@ struct ContentView: View {
                 }
             }
         
-        if daysLeft == 0 {
+        if daysLeft == -1 { // Should be 0
             Text("Goal period completed!")
                 .font(.headline)
                 .foregroundColor(.green)
@@ -39,18 +39,7 @@ struct ContentView: View {
                 .font(.subheadline)
             NextStepButton(nextStep: session.initStep, title: "Start a new challange")
         } else {
-            Image("zombie-phone")
-                .resizable()
-                .offset(x: -11)
-                .aspectRatio(contentMode: .fit)
-                .clipShape(Circle()).overlay {
-                    Circle().stroke(.white, lineWidth: 4)
-                }.scaleEffect(CGSize(width: 0.5, height: 0.5))
-                .padding(.bottom, -140)
-                .offset(y: -80)
-            Text("I'm watching you...")
             VStack(alignment: .leading, spacing: 20) {
-                
                 VStack(alignment: .leading) {
                     RemainingScreenTimeView().environmentObject(session).scaledToFit()
                     Text("Days left to reach the goal:")

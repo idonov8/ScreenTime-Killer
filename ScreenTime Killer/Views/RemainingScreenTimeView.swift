@@ -20,14 +20,11 @@ struct RemainingScreenTimeView: View {
     let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
 
     var body: some View {
-        Text("Time Left today:").font(.headline)
-
         let context = timeLeftContext
         let filter = DeviceActivityFilter(
             segment: .daily(during: DateInterval(start: Date(), end: .now))
         )
         DeviceActivityReport(context, filter: filter)
-
     }
 }
 

@@ -19,10 +19,11 @@ struct TimeLeftView: View {
     let percentageOfDayPassed: Double = {
         let now = Date()
         let startOfDay = Calendar.current.startOfDay(for: now)
-        return now.timeIntervalSince(startOfDay) / 86400 * 100
+        return now.timeIntervalSince(startOfDay) / 86400
     }()
 
     func getColor() -> Color {
+        print(percentageOfDayPassed)
         let correctUsageIndicator = percentageUsed / percentageOfDayPassed
         let tolerance: Double = 0.01 // Define how close to 1 you consider "close enough"
         if abs(correctUsageIndicator - 1) <= tolerance {
