@@ -36,36 +36,38 @@ extension DeviceActivityReport.Context {
     static let timeLeftToday = Self("Time Left Today")
 }
 
+struct timeLeftConfiguration {
+    let totalRemainingActivity: Int
+    let percentageUsed: Double
+}
+
 struct TimeLeftTodayReport: DeviceActivityReportScene {
     var context: DeviceActivityReport.Context {
         .timeLeftToday
     }
 
-    var content: (String) -> TimeLeftView
+    var content: (timeLeftConfiguration) -> TimeLeftView
+
     let userSetGoal: TimeInterval
     
-    init(userSetGoal: TimeInterval, content: @escaping (String) -> TimeLeftView) {
+    init(userSetGoal: TimeInterval, content: @escaping (timeLeftConfiguration) -> TimeLeftView) {
         self.userSetGoal = userSetGoal
         self.content = content
     }
 
-    func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> String {
+    func makeConfiguration(representing data: DeviceActivityResults<DeviceActivityData>) async -> timeLeftConfiguration {
         let totalActivityDuration = await data.flatMap { $0.activitySegments }.reduce(0, {
             $0 + $1.totalActivityDuration
         })
-        
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute]
-        formatter.unitsStyle = .abbreviated
 
         // Reading the usage goal duration
         if let retrievedUsageGoalDuration = readUsageGoalDuration() {
             print("Retrieved usage goal duration: \(retrievedUsageGoalDuration) seconds")
-            return ("\(formatter.string(from: retrievedUsageGoalDuration - totalActivityDuration) ?? "no data") left")
+            return timeLeftConfiguration(totalRemainingActivity: Int((retrievedUsageGoalDuration - totalActivityDuration)) / 60, percentageUsed: totalActivityDuration / retrievedUsageGoalDuration)
         } else {
             print("Failed to retrieve usage goal duration.")
-            return "Failed to retrieve usage goal duration"
+            // Handle error
+            return timeLeftConfiguration(totalRemainingActivity: 0, percentageUsed: 0)
         }
-    
     }
 }

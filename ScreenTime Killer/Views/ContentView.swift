@@ -52,9 +52,7 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 20) {
                 
                 VStack(alignment: .leading) {
-                    RemainingScreenTimeView().environmentObject(session).scaledToFit().onAppear {
-                        userFailedGoal = readFailedGoalFromAppGroup() ?? false
-                    }
+                    RemainingScreenTimeView().environmentObject(session).scaledToFit()
                     Text("Days left to reach the goal:")
                         .font(.headline)
                     Text("\(daysLeft) days")
