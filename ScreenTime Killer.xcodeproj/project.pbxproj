@@ -33,6 +33,7 @@
 		1C9D573D2C8AD8D1006B3C6B /* ActiveChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D573C2C8AD8D1006B3C6B /* ActiveChallengeView.swift */; };
 		1C9D573F2C8ADD67006B3C6B /* RemainingScreenTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D5262C804CF900525341 /* RemainingScreenTimeView.swift */; };
 		1C9D57412C8ADF4A006B3C6B /* DaysProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D57402C8ADF4A006B3C6B /* DaysProgressBar.swift */; };
+		1C9D57432C8AF02F006B3C6B /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D57422C8AF02F006B3C6B /* SuccessView.swift */; };
 		1CA5514B2C7B1EB8002CAF37 /* PhosphorSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1CA5514A2C7B1EB8002CAF37 /* PhosphorSwift */; };
 		1CA6D51E2C7C62A400525341 /* SetPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51D2C7C62A400525341 /* SetPriceView.swift */; };
 		1CA6D5202C7DAA4E00525341 /* GrantPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */; };
@@ -108,6 +109,7 @@
 		1C9D57362C898D5D006B3C6B /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		1C9D573C2C8AD8D1006B3C6B /* ActiveChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChallengeView.swift; sourceTree = "<group>"; };
 		1C9D57402C8ADF4A006B3C6B /* DaysProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysProgressBar.swift; sourceTree = "<group>"; };
+		1C9D57422C8AF02F006B3C6B /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		1CA6D51D2C7C62A400525341 /* SetPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPriceView.swift; sourceTree = "<group>"; };
 		1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrantPermissionsView.swift; sourceTree = "<group>"; };
 		1CA6D5212C7DAADB00525341 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextStepButton.swift; path = "ScreenTime Killer/Components/NextStepButton.swift"; sourceTree = SOURCE_ROOT; };
@@ -155,6 +157,7 @@
 				1C51C8DB2C7B051600A3B796 /* MainAppView.swift */,
 				1C8FBCEB2C74AA3F00F6E5AC /* ContentView.swift */,
 				1C9D573C2C8AD8D1006B3C6B /* ActiveChallengeView.swift */,
+				1C9D57422C8AF02F006B3C6B /* SuccessView.swift */,
 				1CA6D51F2C7DAA4E00525341 /* GrantPermissionsView.swift */,
 				1CA6D5262C804CF900525341 /* RemainingScreenTimeView.swift */,
 				1C51C8D72C786B1900A3B796 /* WelcomeView.swift */,
@@ -431,6 +434,7 @@
 				1CA6D5202C7DAA4E00525341 /* GrantPermissionsView.swift in Sources */,
 				1C9D57412C8ADF4A006B3C6B /* DaysProgressBar.swift in Sources */,
 				1C51C8D62C78696600A3B796 /* SessionManager.swift in Sources */,
+				1C9D57432C8AF02F006B3C6B /* SuccessView.swift in Sources */,
 				1C9D573D2C8AD8D1006B3C6B /* ActiveChallengeView.swift in Sources */,
 				1CACCCA72C7C4D3300687EA9 /* TimePicker.swift in Sources */,
 				1C51C8DA2C786D6D00A3B796 /* StepsView.swift in Sources */,
