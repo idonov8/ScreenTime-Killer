@@ -12,9 +12,9 @@ struct SuccessView: View {
     var hoursGained: Int
     var daysChallenge: Int
     var moneySaved: Int
-    var projectedDays: Int
-    var projectedYears: Int
-    var donationAmount: Int
+    var projectedDaysIn10Years: Int
+    var projectedYears: Int = 10
+    var donationAmount: Int { Int(0.3*Double(moneySaved)) }
     
     // State for animations
     @State private var showCheckmark = false
@@ -97,7 +97,7 @@ struct SuccessView: View {
                 
                 VStack(spacing: 20) {
                     // Future Benefits
-                    Text("If you keep this habit, you'll gain \(projectedDays) full days in the next \(projectedYears) years!")
+                    Text("If you keep this habit, you'll gain \(projectedDaysIn10Years) full days in the next \(projectedYears) years!")
                         .font(.body)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
@@ -198,8 +198,5 @@ struct ConfettiParticleView: View {
         hoursGained: 40,
         daysChallenge: 30,
         moneySaved: 200,
-        projectedDays: 200,
-        projectedYears: 20,
-        donationAmount: 60
-    )
+        projectedDaysIn10Years: 200)
 }

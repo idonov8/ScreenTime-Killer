@@ -26,10 +26,13 @@ struct ContentView: View {
                 }
             }
         
-        if daysLeft == -1 { // Should be 0
-            Text("Goal period completed!")
-                .font(.headline)
-                .foregroundColor(.green)
+        if daysLeft == 0 {
+            SuccessView(
+                hoursGained: 40,// TODO: calculate an actual number
+                daysChallenge: session.usageGoalDays,
+                moneySaved: session.riskAmount,
+                projectedDaysIn10Years: 200 //TODO: calculate actual number
+                )
         } else if userFailedGoal {
             Text("You failed!!!").onAppear {
                 // TODO: Charge money
