@@ -21,9 +21,7 @@ struct ActiveChallengeView: View {
                 Text("\(session.riskAmount)$").font(.system(size: 70)).bold()
             }
             Spacer()
-            Text("\(daysLeft) days left")
-                .font(.subheadline)
-                .foregroundColor(daysLeft > 0 ? .primary : .red)
+            DaysProgressBar(duration: session.usageGoalDays, startDay: session.goalSetDate, failedDays: [.daysAgo(5)])
         }
         .padding()
     }

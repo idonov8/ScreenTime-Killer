@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         var daysLeft: Int {
                 let calendar = Calendar.current
-            let goalEndDate = calendar.date(byAdding: .day, value: session.usageGoalDays, to: session.goalSetDate)!
+                let goalEndDate = calendar.date(byAdding: .day, value: session.usageGoalDays, to: session.goalSetDate)!
                 let now = Date()
                 
                 if now >= goalEndDate {

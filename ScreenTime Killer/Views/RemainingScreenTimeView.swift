@@ -13,7 +13,6 @@ import DeviceActivity
 struct RemainingScreenTimeView: View {
     @State private var timeLeftContext: DeviceActivityReport.Context = .init(rawValue: "Time Left Today")
     // TODO: ask for permissions again maybe to make sure?
-    let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
 
     var body: some View {
         let context = timeLeftContext
