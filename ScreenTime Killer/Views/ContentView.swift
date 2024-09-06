@@ -35,34 +35,11 @@ struct ContentView: View {
                 // TODO: Charge money
             }
             Text("Pledged price:")
-            Text("$\(session.riskAmount, specifier: "%.2f") has been charged from your credit card")
+            Text("\(session.riskAmount)$ has been charged from your credit card")
                 .font(.subheadline)
             NextStepButton(nextStep: session.initStep, title: "Start a new challange")
         } else {
-            VStack(alignment: .leading, spacing: 20) {
-                VStack(alignment: .leading) {
-                    RemainingScreenTimeView().environmentObject(session).scaledToFit()
-                    Text("Days left to reach the goal:")
-                        .font(.headline)
-                    Text("\(daysLeft) days")
-                        .font(.subheadline)
-                        .foregroundColor(daysLeft > 0 ? .primary : .red)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text("Pledged price:")
-                        .font(.headline)
-                    Text("$\(session.riskAmount, specifier: "%.2f")")
-                        .font(.subheadline)
-                }
-                
-                
-                
-                
-                
-                Spacer()
-            }
-            .padding()
+            ActiveChallengeView(daysLeft: daysLeft).environmentObject(session)
         }
    }
 

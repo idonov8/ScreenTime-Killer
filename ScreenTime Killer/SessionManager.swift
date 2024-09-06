@@ -54,7 +54,7 @@ final class SessionManager: ObservableObject {
         }
     }
     
-    @Published var riskAmount: Double {
+    @Published var riskAmount: Int {
         didSet {
             UserDefaults.standard.set(riskAmount, forKey: UserDefaultKeys.storedRiskAmount)
         }
@@ -81,7 +81,7 @@ final class SessionManager: ObservableObject {
         }
         
         // Initialize risk amount
-        self.riskAmount = UserDefaults.standard.double(forKey: UserDefaultKeys.storedRiskAmount)
+        self.riskAmount = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedRiskAmount)
 
     }
     
@@ -156,7 +156,7 @@ final class SessionManager: ObservableObject {
         }
     }
 
-    func setRiskAmount(_ amount: Double) {
+    func setRiskAmount(_ amount: Int) {
         self.riskAmount = amount
     }
 }

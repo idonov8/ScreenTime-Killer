@@ -7,16 +7,12 @@
 
 import SwiftUI
 import DeviceActivity
-import FamilyControls
+//import FamilyControls
 
-
-//import DeviceActivityReportExtention
 
 struct RemainingScreenTimeView: View {
-    @EnvironmentObject var session: SessionManager
-
     @State private var timeLeftContext: DeviceActivityReport.Context = .init(rawValue: "Time Left Today")
-    let center = AuthorizationCenter.shared // ask for permissions again maybe to make sure?
+    // TODO: ask for permissions again maybe to make sure?
     let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -1, to: .now)!
 
     var body: some View {

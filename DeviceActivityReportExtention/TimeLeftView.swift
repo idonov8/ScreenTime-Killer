@@ -25,7 +25,7 @@ struct TimeLeftView: View {
     func getColor() -> Color {
         print(percentageOfDayPassed)
         let correctUsageIndicator = percentageUsed / percentageOfDayPassed
-        let tolerance: Double = 0.01 // Define how close to 1 you consider "close enough"
+        let tolerance: Double = 0.3 // Define how close to 1 you consider "close enough"
         if abs(correctUsageIndicator - 1) <= tolerance {
             return .orange
         } else if correctUsageIndicator < 1 {
@@ -39,15 +39,15 @@ struct TimeLeftView: View {
         VStack {
             ZStack {
                 CircularProgressView(progress: percentageUsed, color: getColor())
-                            .frame(width: 100, height: 100)
+                    .frame(width: 100, height: 100)
                 Text("\(totalRemainingActivity)").foregroundColor(getColor()).font(.largeTitle)
                     .bold()
             }
+            Spacer().frame(height: 15)
+            Text("Minutes left to use your phone today").bold()
+            Text("You’ve used \(percentageUsed.toPercentageString()) of your screen time").font(.subheadline)
+            
         }
-        Spacer().frame(height: 15)
-        Text("Minutes left to use your phone today").bold()
-        Text("You’ve used \(percentageUsed.toPercentageString()) of your screen time").font(.subheadline)
-        
     }
 }
 

@@ -10,34 +10,38 @@ import SwiftUI
 struct SetPriceView: View {
     @EnvironmentObject var session: SessionManager
 
-    @State private var price = 50.0
+    @State private var price: Int = 50
     @State private var isEditing = false
 
     var body: some View {
-        Spacer().frame(height:80)
-        Text("Set your price 💸")
-            .font(.title)
-        Text("Choose a sum of money will make you stick to your goal")
-            .font(.title2)
-            .multilineTextAlignment(.center)
-            .fontWeight(.light)
+        let doublePrice = Binding(
+                    get: { Double(self.price) },
+                    set: { self.price = Int($0) } // Or other custom logic
+                )
         VStack {
+            Spacer().frame(height:80)
+            Text("Set your price 💸")
+                .font(.title)
+            Text("Choose a sum of money will make you stick to your goal")
+                .font(.title2)
+                .multilineTextAlignment(.center)
+                .fontWeight(.light)
                Slider(
-                   value: $price,
-                   in: 1...1000,
-                   step: 10
+                value: doublePrice,
+                   in: 5...1000,
+                   step: 5
                ) {
                    Text("$")
                }  minimumValueLabel: {
-                   Text("1")
+                   Text("5")
                } maximumValueLabel: {
                    Text("1000")
                } onEditingChanged: { editing in
                    isEditing = editing
                }
-            let formattedPrice = String(format: "%.0f", price)
-            Text("\(formattedPrice)$")
-                   .foregroundColor(isEditing ? .red : .blue)
+            Spacer().frame(height:60)
+            Text("\(price)$")
+                .foregroundColor(isEditing ? .blue : .black).bold().font(.largeTitle)
         }.padding()
         Spacer()
 
