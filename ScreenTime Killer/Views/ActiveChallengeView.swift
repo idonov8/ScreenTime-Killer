@@ -20,8 +20,12 @@ struct ActiveChallengeView: View {
                     .font(.system(size: 18))
                 Text("\(session.riskAmount)$").font(.system(size: 70)).bold()
             }
+            HStack {
+               
+                Link("\(Image(systemName: "info.circle")) How to reduce my screen time?", destination: URL(string: "https://ivory-kookaburra-2de.notion.site/How-to-reduce-my-screen-time-a31d7cf405bd406e937bf51b7362a214?pvs=4")!)
+            }
             Spacer()
-            DaysProgressBar(duration: session.usageGoalDays, startDay: session.goalSetDate, failedDays: [.daysAgo(5)])
+            DaysProgressBar(duration: session.usageGoalDays, startDay: session.goalSetDate, failedDays: [])
         }
         .padding()
     }
