@@ -54,7 +54,7 @@ final class SessionManager: ObservableObject {
         }
     }
     
-    @Published var riskAmount: Double {
+    @Published var riskAmount: Int {
         didSet {
             UserDefaults.standard.set(riskAmount, forKey: UserDefaultKeys.storedRiskAmount)
         }
@@ -81,7 +81,7 @@ final class SessionManager: ObservableObject {
         }
         
         // Initialize risk amount
-        self.riskAmount = UserDefaults.standard.double(forKey: UserDefaultKeys.storedRiskAmount)
+        self.riskAmount = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedRiskAmount)
 
     }
     
@@ -135,10 +135,11 @@ final class SessionManager: ObservableObject {
     }
 
     func saveUsageGoalToAppGroup(_ duration: TimeInterval) {
+        // TODO: this is redundant, can be saved to app group using the already in-use UserDefaults
         // Step 1: Get the URL for the shared app group directory
         if let groupURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.screen-time-goal") {
             // Step 2: Append the file name to the directory path
-            let fileURL = groupURL.appendingPathComponent("usageGoalDuration.plist")
+            let fileURL = groupURL.appendingPathComponent("usageGoalData.plist")
             
             // Step 3: Create a dictionary with your data (or just a single value)
             let dataToSave: [String: TimeInterval] = ["usageGoalDuration": duration]
@@ -155,7 +156,7 @@ final class SessionManager: ObservableObject {
         }
     }
 
-    func setRiskAmount(_ amount: Double) {
+    func setRiskAmount(_ amount: Int) {
         self.riskAmount = amount
     }
 }

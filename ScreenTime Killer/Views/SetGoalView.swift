@@ -10,11 +10,11 @@ import PhosphorSwift
 
 struct SetGoalView: View {
     @EnvironmentObject var session: SessionManager
-    
-    // TODO: Save information in the session
+
+    // Initialize with default values
     @State var hours: Int = 2
     @State var minutes: Int = 30
-    @State var days: Int = 7
+    @State var days: Int = 30
     var body: some View {
         NavigationStack {
             VStack {

@@ -7,19 +7,47 @@
 
 import SwiftUI
 
+extension Double {
+    func toPercentageString(withDecimals decimals: Int = 0) -> String {
+        return String(format: "%.\(decimals)f%%", self * 100)
+    }
+}
+
 struct TimeLeftView: View {
-    let totalRemainingActivity: String
-//    let userSetGoal: TimeInterval
+    let totalRemainingActivity: Int
+    let percentageUsed: Double
+    let percentageOfDayPassed: Double = {
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        return now.timeIntervalSince(startOfDay) / 86400
+    }()
+
+    func getColor() -> Color {
+        print(percentageOfDayPassed)
+        let correctUsageIndicator = percentageUsed / percentageOfDayPassed
+        let tolerance: Double = 0.3 // Define how close to 1 you consider "close enough"
+        if abs(correctUsageIndicator - 1) <= tolerance {
+            return .orange
+        } else if correctUsageIndicator < 1 {
+            return .green
+        } else {
+            return .red
+        }
+    }
 
     var body: some View {
-//        let formatter = DateComponentsFormatter()
-//        formatter.allowedUnits = [.hour, .minute, .second]
-////        formatter.unitsStyle = .abbreviated
-//
-//        let totalActivityTime = TimeInterval(Double(totalRemainingActivity) ?? 6.5*3600)
-//        let remainingTime = userSetGoal - totalActivityTime
-
-        Text(totalRemainingActivity)
+        VStack {
+            ZStack {
+                CircularProgressView(progress: percentageUsed, color: getColor())
+                    .frame(width: 100, height: 100)
+                Text("\(totalRemainingActivity)").foregroundColor(getColor()).font(.largeTitle)
+                    .bold()
+            }
+            Spacer().frame(height: 15)
+            Text("Minutes left to use your phone today").bold()
+            Text("You’ve used \(percentageUsed.toPercentageString()) of your screen time").font(.subheadline)
+            
+        }
     }
 }
 
@@ -27,5 +55,5 @@ struct TimeLeftView: View {
 // members of your app's Xcode target as well as members of your extension's target. You can use
 // Xcode's File Inspector to modify a file's Target Membership.
 #Preview {
-    TimeLeftView(totalRemainingActivity: "1h 23m")
+    TimeLeftView(totalRemainingActivity: 52, percentageUsed: 0.8)
 }

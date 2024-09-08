@@ -19,7 +19,7 @@ struct DeviceActivityReportExtention: DeviceActivityReportExtension {
         }
         
         TimeLeftTodayReport(userSetGoal: userSetGoal) { activity in
-            TimeLeftView(totalRemainingActivity: activity)
+            TimeLeftView(totalRemainingActivity: activity.totalRemainingActivity, percentageUsed: activity.percentageUsed)
         }
         // Add more reports here...
     }

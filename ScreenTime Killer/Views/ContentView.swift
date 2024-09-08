@@ -10,12 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var session: SessionManager
-
+    @State private var userFailedGoal: Bool = false // TODO: Populate using DeviceActivityMonitor
     
     var body: some View {
         var daysLeft: Int {
                 let calendar = Calendar.current
-            let goalEndDate = calendar.date(byAdding: .day, value: session.usageGoalDays, to: session.goalSetDate)!
+                let goalEndDate = calendar.date(byAdding: .day, value: session.usageGoalDays, to: session.goalSetDate)!
                 let now = Date()
                 
                 if now >= goalEndDate {
@@ -26,72 +26,27 @@ struct ContentView: View {
                 }
             }
         
-        Image("zombie-phone")
-            .resizable()
-            .offset(x: -11)
-            .aspectRatio(contentMode: .fit)
-            .clipShape(Circle()).overlay {
-                Circle().stroke(.white, lineWidth: 4)
-            }.scaleEffect(CGSize(width: 0.5, height: 0.5))
-            .padding(.bottom, -140)
-            .offset(y: -80)
-       Text("I'm watching you...")
-        VStack(alignment: .leading, spacing: 20) {
-                   Text("Your Usage Goal")
-                       .font(.title)
-                       .fontWeight(.bold)
-                   
-                   HStack {
-                       VStack(alignment: .leading) {
-                           Text("Daily Goal:")
-                               .font(.headline)
-                           let totalSeconds = Int(session.usageGoalDuration)
-                           let hours = totalSeconds / 3600
-                           let minutes = (totalSeconds % 3600) / 60
+        if daysLeft == 0 {
+            SuccessView(
+                hoursGained: 40,// TODO: calculate an actual number
+                daysChallenge: session.usageGoalDays,
+                moneySaved: session.riskAmount,
+                projectedDaysIn10Years: 200 //TODO: calculate actual number
+                )
+        } else if userFailedGoal {
+            Text("You failed!!!").onAppear {
+                // TODO: Charge money
+            }
+            Text("Pledged price:")
+            Text("\(session.riskAmount)$ has been charged from your credit card")
+                .font(.subheadline)
+            NextStepButton(nextStep: session.initStep, title: "Start a new challange")
+        } else {
+            ActiveChallengeView(daysLeft: daysLeft).environmentObject(session)
+        }
+   }
 
-                           Text("\(hours) hours \(minutes) minutes")
-                               .font(.subheadline)
-                       }
-                       
-                       Spacer()
-                       
-                       VStack(alignment: .trailing) {
-                           Text("Goal Period:")
-                               .font(.headline)
-                           Text("\(session.usageGoalDays) days")
-                               .font(.subheadline)
-                       }
-                   }
-                   
-                   VStack(alignment: .leading) {
-                       Text("Time Left:")
-                           .font(.headline)
-                       Text("\(daysLeft) days")
-                           .font(.subheadline)
-                           .foregroundColor(daysLeft > 0 ? .primary : .red)
-                   }
-            
-                    VStack(alignment: .leading) {
-                        Text("Amount at Risk:")
-                            .font(.headline)
-                        Text("$\(session.riskAmount, specifier: "%.2f")")
-                            .font(.subheadline)
-                    }
-            
-                    RemainingScreenTimeView().environmentObject(session)
-                   
-                   if daysLeft == 0 {
-                       Text("Goal period completed!")
-                           .font(.headline)
-                           .foregroundColor(.green)
-                   }
-                   
-                   Spacer()
-               }
-               .padding()
-           }
-//        DeviceActivityReport.init(context)
-    }
+}
 
 
 #Preview {
