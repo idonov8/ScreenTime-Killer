@@ -7,6 +7,11 @@
 		<key>DeviceActivityReportExtention.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>MyDeviceActivityMonitorExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
 		<key>ScreenTime Killer.xcscheme_^#shared#^_</key>
@@ -22,6 +27,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1C8DBEA62C914B490000C2F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1C8FBCE52C74AA3F00F6E5AC</key>
 		<dict>
 			<key>primary</key>

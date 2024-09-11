@@ -10,12 +10,13 @@ import Foundation
 final class SessionManager: ObservableObject {
     
     enum UserDefaultKeys {
-       static let storedCurrentStep = "currentStep"
-       static let storedUsageGoalDuration = "usageGoalDuration"
-       static let storedUsageGoalDays = "usageGoalDays"
-       static let storedGoalSetDate = "usageGoalSetDate"
-       static let storedRiskAmount = "riskAmount"
-   }
+        static let storedCurrentStep = "currentStep"
+        static let storedUsageGoalDuration = "usageGoalDuration"
+        static let storedUsageGoalDays = "usageGoalDays"
+        static let storedGoalSetDate = "usageGoalSetDate"
+        static let storedRiskAmount = "riskAmount"
+        static let failedDailyChallenge = "failedDailyChallenge"
+    }
 
     enum CurrentStep: Int {
         case Step1 = 1
@@ -59,8 +60,26 @@ final class SessionManager: ObservableObject {
             UserDefaults.standard.set(riskAmount, forKey: UserDefaultKeys.storedRiskAmount)
         }
     }
+    
+    var hasFailedDailyChallenge: Bool {
+        get {
+            if let userDefaults = UserDefaults(suiteName: "group.screen-time-goal") {
+                userDefaults.bool(forKey: UserDefaultKeys.failedDailyChallenge)
+            } else { false }
+        }
+        set {
+            if let userDefaults = UserDefaults(suiteName: "group.screen-time-goal") {
+                userDefaults.set(newValue, forKey: UserDefaultKeys.failedDailyChallenge)
+            }
+        }
+    }
+
+    private var userDefaults: UserDefaults?
 
     init() {
+        // Initialize UserDefaults
+        self.userDefaults = UserDefaults(suiteName: "group.screen-time-goal")
+        
         // Initialize current step
         if let storedStep = UserDefaults.standard.object(forKey: UserDefaultKeys.storedCurrentStep) as? Int,
            let step = CurrentStep(rawValue: storedStep) {
@@ -82,7 +101,9 @@ final class SessionManager: ObservableObject {
         
         // Initialize risk amount
         self.riskAmount = UserDefaults.standard.integer(forKey: UserDefaultKeys.storedRiskAmount)
-
+        
+        // Initialize failed daily challenge
+//        self.hasFailedDailyChallenge = userDefaults?.bool(forKey: UserDefaultKeys.failedDailyChallenge) ?? false
     }
     
     func initStep() {

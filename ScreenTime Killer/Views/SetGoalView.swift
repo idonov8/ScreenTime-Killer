@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import PhosphorSwift
 
 struct SetGoalView: View {
     @EnvironmentObject var session: SessionManager
@@ -41,9 +40,7 @@ struct SetGoalView: View {
                     Text("days")
                 }
                 HStack {
-                    Ph.info.regular
-                        .frame(width: 16, height: 16)
-                    Text(" It takes 66 days to form a new habit")
+                    Text("\(Image(systemName: "info.circle")) It takes 66 days to form a new habit")
                         .font(.caption)
                 }
             

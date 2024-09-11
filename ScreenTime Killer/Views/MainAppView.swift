@@ -18,7 +18,6 @@ struct MainAppView: View {
 
     let backTransition: AnyTransition = .slide.combined(with: .opacity)
 
-
     var body: some View {
         VStack {
             if session.currentStep != .Step1 {
@@ -57,7 +56,6 @@ struct MainAppView: View {
                     .environmentObject(session)
                     .transition(isBack ? backTransition : transition)
             default:
-                // TODO: implement last screen
                 ContentView()
                     .environmentObject(session)
                     .onAppear {

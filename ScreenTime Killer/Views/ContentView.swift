@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-
+import DeviceActivity
+import SharedScreenTime
 
 struct ContentView: View {
     @EnvironmentObject var session: SessionManager
-    @State private var userFailedGoal: Bool = false // TODO: Populate using DeviceActivityMonitor
-    
+
     var body: some View {
         var daysLeft: Int {
                 let calendar = Calendar.current
@@ -33,7 +33,7 @@ struct ContentView: View {
                 moneySaved: session.riskAmount,
                 projectedDaysIn10Years: 200 //TODO: calculate actual number
                 )
-        } else if userFailedGoal {
+        } else if session.hasFailedDailyChallenge {
             Text("You failed!!!").onAppear {
                 // TODO: Charge money
             }
@@ -43,6 +43,11 @@ struct ContentView: View {
             NextStepButton(nextStep: session.initStep, title: "Start a new challange")
         } else {
             ActiveChallengeView(daysLeft: daysLeft).environmentObject(session)
+                .onAppear {
+                    // Initialize ScreenTimeMonitor
+//                    ScreenTimeMonitor.shared.startMonitoring(usageGoalDuration: session.usageGoalDuration)
+                    ScreenTimeMonitor.shared.startMonitoring(usageGoalDuration: 30)//for debug
+                }
         }
    }
 

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct ScreenTime_KillerApp: App {
 

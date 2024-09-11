@@ -6,15 +6,13 @@
 //
 
 import SwiftUI
-import PhosphorSwift
 
 
 struct StepsView: View {
     @EnvironmentObject var session: SessionManager
 
     var body: some View {
-        Ph.info.regular
-            .frame(width: 150, height: 150)
+        Image(systemName: "info.circle").resizable().frame(width: 150, height: 150)
         Text("It's pretty Simple")
             .font(.largeTitle)
         Spacer()
